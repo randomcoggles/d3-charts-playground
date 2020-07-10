@@ -1,0 +1,53 @@
+<h3 class="page-title">Brush selection Example
+	<span >
+    <mat-icon matTooltip="Drag to select items in the chart" class="material-icons tile-icon">help_outlin</mat-icon>
+  </span>
+
+</h3>
+<!-- {{selectionRanges | json}} -->
+<div class="panels d-flex">
+	<div *ngIf="!chartReady" class="spinner-wrap d-flex center">
+		<mat-spinner></mat-spinner>
+	</div>
+	<div id="chart-wrap" [hidden]="!dataReady" [ngClass]="[(chartReady ? 'chart-ready': ''), selectionMode]" #svgWrap
+		[class.disable-brush]="disableBrush" >
+    <div>Selection mode: 
+      <label><input type="radio" [(ngModel)]="selectionMode" name="selectionmode" value="drag"/> 
+      drag</label> &nbsp;
+      <label><input type="radio" [(ngModel)]="selectionMode" name="selectionmode" value="single"/>Single</label>
+    </div>
+	</div>
+
+	<div class="summary-panel">
+		<ul class="selection-ranges" *ngIf="selectionRanges?.length">
+			<li class="range-item d-flex" *ngFor="let range of selectionRanges; let i = index">
+        <!-- TODO: show single selected item: { "Sepal_Length": "5.8", "Sepal_Width": "2.7", "Petal_Length": "5.1", "Petal_Width": "1.9", "Species": "virginica" } -->
+				<div class="item-left">
+					<div class="range-line">
+						<span class="label-col">
+                <div class="bnt-close" (click)="selectionRanges.splice(i,1)">&times;</div>
+                Length: </span>
+						<span class="min-col">{{range.rangeY.min}}</span>
+						<span class="max-col">{{range.rangeY.max}}</span>
+					</div>
+					<div class="range-line">
+						<span class="label-col">Width: </span>
+						<span class="min-col">{{range.rangeX.min}}</span>
+						<span class="max-col">{{range.rangeX.max}}</span>
+					</div>
+				</div>
+				<div class="item-right center flex-1">
+					{{range.numberOfItems}} <br> items
+          </div>
+			</li>
+		</ul>
+
+		<ul *ngIf="!selectionRanges?.length" class="selection-ranges">
+			<li class="range-item d-flex center"
+				*ngFor="let range of [{text: 'Select items on the chart'}, {text: 'by dragging your mouse'}, {text: 'Your selections are displayed here'}]; let i = index">
+				<h4>{{range.text}}</h4>
+			</li>
+		</ul>
+
+	</div>
+</div>

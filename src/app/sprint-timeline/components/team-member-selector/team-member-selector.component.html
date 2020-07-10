@@ -1,0 +1,42 @@
+<mat-form-field class="example-chip-list">
+  <mat-label>Team members</mat-label>
+  <mat-chip-list #chipList aria-label="Fruit selection">
+    <mat-chip
+      *ngFor="let member of selectedMembers"
+      [selectable]="selectable"
+      [removable]="removable"
+      (removed)="remove(member)">
+      {{member.name}}
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+
+    <mat-chip color="primary" class="msg-chip" [hidden]="!submitMessages.waiting">      
+      {{submitMessages.waiting}}
+      &nbsp; <mat-icon matChipRemove >cancel</mat-icon>
+    </mat-chip>
+
+    <mat-chip (click)="teamMembersUrl = './assets/mock-team.json'; getTeamMembers()" 
+      color="accent" class="msg-chip" selected [color]="'warn'" [hidden]="!submitMessages.error">
+      {{submitMessages.error}} &nbsp;
+      Click to try again 
+          <mat-icon>autorenew</mat-icon>      
+    </mat-chip>
+
+    <input
+      placeholder="Start typing or select from the dropdown"
+      #memberInput
+      [hidden]="!!submitMessages?.error || !!submitMessages?.waiting"
+      [formControl]="memberCtrl"
+      [matAutocomplete]="auto"
+      [matChipInputFor]="chipList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+  <mat-autocomplete #auto="matAutocomplete"  (optionSelected)="selected($event)">
+    <mat-option [disabled]="member.selected" (click)="blur()" *ngFor="let member of unSelectedMembers" [value]="member">
+      {{member.name}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+<!-- {{unSelectedMembers | json}}
+.. -->

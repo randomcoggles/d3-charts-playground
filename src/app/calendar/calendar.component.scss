@@ -1,0 +1,79 @@
+.calendar {
+	max-width: 540px;
+	border: 0;
+}
+td.date {
+	min-width: 115px;
+}
+td.day {
+	min-width: 25px;
+	text-align: center;
+}
+.weekday td.day {
+	background-color: #5d69b1;
+}
+tr.weekend {
+	background-color: #ec407a;
+	color: #fff;
+}
+td.has-event {
+	background-color: blue;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	height: 20px;
+	width: 20px;
+}
+tr.holiday {
+	background-color: #010101;
+	color: #fff;
+}
+.event-wrap_fix {
+	font-size: 29px;
+	height: 20px;
+	width: 20px;
+	position: relative;
+	display: block;
+	line-height: 25px;
+}
+.weekday span.day-wrap {
+	padding: 5px;
+	color: #fff;
+}
+.weekday.holiday td.day {
+	background-color: #010101;
+}
+.weekday.holiday td.event {
+	background-color: #010101;
+}
+td.day {
+	display: none;
+}
+
+.event-action {
+  font-size: 14px;
+}
+.actions-panel {
+  background-color: lightgray;
+  font-size: 10px;
+  padding: 12px;
+  box-shadow: 5px 6px 14px #242020;
+  border-radius: 8px;
+  position: absolute;
+  margin-left: 40px;
+  margin-top: -38px;
+  max-width: 100px;
+}
+.btn-weekend {
+  cursor: not-allowed;
+}
+::ng-deep .actions-panel {
+  button {
+      height: 34px;
+      line-height: 0px;
+  }
+  border-radius: 8px!important;
+}
+.day-of-week {
+  text-align: center;
+}

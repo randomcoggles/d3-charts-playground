@@ -1,0 +1,101 @@
+:host ::ng-deep { 
+  .selected, .single-selected {
+    opacity: 1 !important;
+    stroke: black;
+    stroke-width: 1px;
+  }
+  .bubble-hover{
+    opacity: 1 !important;
+    stroke-width: 2px;
+    stroke: #000;
+    stroke-dasharray: 3;
+    stroke-linecap: round;
+  }  
+  .selection {
+    stroke-dasharray: .3em;
+    stroke: black;
+  }
+}
+#chart-wrap {
+    opacity: .1;
+    transition: opacity 1000ms;
+  &.chart-ready {
+    transition: opacity 1000ms;
+    opacity: 1;
+  }
+}
+
+.single ::ng-deep { 
+  .overlay {
+    display: none;
+  }
+  
+}
+
+
+
+.label-col {
+    /* outline: dashed 1px; */
+    width: 50px;
+    display: inline-block;
+}
+.min-col, .max-col {
+    width: 35px;
+    display: inline-block;
+    padding: 0 8px;
+}
+
+.selection-ranges {
+  max-height: 370px;
+  min-height: 250px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0 8px;
+  margin: 0;
+}
+
+.range-item {
+    padding: 8px;
+    /* box-shadow: 1px 1px 3px #9797a0; */
+    margin: 4px;
+    border-radius: 4px;
+    transition: transform 300ms;
+    min-width: 200px;
+    &:nth-child(odd) {
+        background-color: aliceblue;
+    }
+    &:hover {
+    /* box-shadow: 1px 1px 3px grey; */
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: transform 300ms;
+      
+    .bnt-close {
+      display: block;
+    }
+  }
+  .item-right {
+    border-left: solid 1px #b6cfe4;
+    padding: 10px;
+  }
+  
+  .bnt-close {
+    display: none;
+    position: absolute;
+    font-size: 38px;
+    width: 15px;
+    height: 15px;
+    font-weight: bold;
+    line-height: 17px;
+    text-align: center;
+    border-radius: 50%;
+    color: red;
+    margin-left: -8px;
+    margin-top: -9px;
+  }
+
+}
+.spinner-wrap {
+  min-width: 560px;
+  min-height: 420px;
+}

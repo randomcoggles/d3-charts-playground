@@ -1,0 +1,25 @@
+.wrap{
+  display: flex;
+}
+
+.perspective-area {
+    box-shadow: 0 0 100px #000 inset;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+}
+.little-ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid 1px blue;
+  background-color: #fff;
+  border-radius: 50%;  
+}
+.secondary-controls {
+  border: dashed 1px;
+  #sld-scale {
+    position: absolute;
+    transform: rotate(270deg);
+  }
+}

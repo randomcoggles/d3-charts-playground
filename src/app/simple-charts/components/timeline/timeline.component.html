@@ -1,0 +1,14 @@
+<h1>Timeline 1</h1>
+<div id="chart-wrap" >  
+		<svg class="svg-canvas" [attr.viewBox]="viewBox"
+			xmlns="http://www.w3.org/2000/svg" #svgWrap>
+        <polygon class="timeline-pointer" [attr.transform]="pointerTransform" points="1,1 19,1 9.5,19" fill="none" style="stroke: black;fill: #80deea;stroke-width: 2"></polygon>
+      <g class="x axis" [attr.transform]="xTicksTransform" fill="none" font-size="10" text-anchor="middle">
+        <rect [attr.width]="innerWidth + 40" height="25" style="fill: #80DEEA;stroke-width: 2;stroke:#000;transform: translate(-20px, 0px);" />
+        <g (click)="onTickClicked($event, xTick, i)" class="tick" opacity="1" [attr.transform]="'translate('+ xTick.x +',0)'" *ngFor="let xTick of xTicks; let i = index">
+          <line stroke="#000" y2="6" x1="0.5" x2="0.5"></line>
+          <text fill="#000" y="9" x="0.5" dy=".71em">{{xTick.date | date: 'yyyy'}}</text>
+        </g>
+      </g>
+    </svg>
+</div>

@@ -1,0 +1,17 @@
+<div class="wrap">
+	<!-- <h5>Controller panel {{tcManager.depth }}</h5> -->
+	
+	<div class="perspective-area" 
+    #perspectiveArea 
+    (mousemove)="perspectiveAreaMousemove($event)"
+		(wheel)="perspectiveAreaMouseWheel($event)">
+		<span>
+      <span class="little-ball"
+        [style.left]="ballPoint?.x + 'px'"
+        [style.top]="ballPoint?.y + 'px'"
+        [style.transform]="ballPointTransform"
+      ></span>
+		</span>
+	</div>
+</div>
+<!-- <span style="background-color: green; color: #fff"> {{ballPoint | json}}</span> -->

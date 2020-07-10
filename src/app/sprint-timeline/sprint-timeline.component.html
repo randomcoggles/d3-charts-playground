@@ -1,0 +1,61 @@
+
+			<router-outlet></router-outlet>
+
+<!--
+<h1>Sprint timeline</h1>
+<div class="sprints-wrap flex-row">
+
+	<div class="right-side">
+		<ng-container *ngFor="let sprint of sprints; let i = index">
+			<div class="timeline-item flex-row" *ngIf="i%2 === 0">
+				<div class="content">
+					<h3 class="sprint-title">{{sprint.title}}</h3>
+					<p>{{sprint.retrospective?.summaryPhrase}}</p>
+					<div class="team-wrap flex-row wrap">
+						<img [src]="teamMember.url" width="56" height="56"  alt="" class="team-member" *ngFor="let teamMember of sprint.team">
+          </div>
+					</div>
+					<div class="date-container">
+						<h2 class="date">{{sprint.startDate}}</h2>
+
+						<svg width="60" height="160" xmlns="http://www.w3.org/2000/svg" class="left-branch">
+							<path transform="scale(1, -1) translate(0, -100)" d="M 6 10 C 79 0, 34 100, 63 160"
+								stroke-width="6" stroke="#ec407aff" fill="transparent"
+								style="transform: translate(-2px, -6px);"></path>
+						</svg>
+					</div>
+				</div>
+		</ng-container>
+	</div>
+
+	<div class="middle-side">
+		<div class="timeline-bubble"></div>
+	</div>
+
+	<div class="left-side">
+		<div class="timeline-item half">
+			<p><span class="bold">Sprint timeline</span> is here to help you have a better insights on what's going on
+				thoughtout sprint. It's going to help your identify recurrent problems and find a way to solve them</p>
+		</div>
+		<ng-container *ngFor="let sprint of sprints; let i = index">
+			<div class="timeline-item flex-row" *ngIf="i%2 === 1">
+				<div class="date-container">
+					<svg _ngcontent-qiq-c229="" width="60" height="160" xmlns="http://www.w3.org/2000/svg"
+						class="right-branch">
+						<path d="M -4 171 C 40 119, -8 10 61 25" stroke-width="6" stroke="#ec407aff" fill="transparent">
+						</path>
+					</svg>
+					<h2 class="date">{{sprint.startDate}}</h2>
+				</div>
+				<div class="content">
+					<h3 class="sprint-title">{{sprint.title}}</h3>
+					<p>{{sprint.retrospective?.summaryPhrase}}</p>
+					<div class="team-wrap flex-row wrap">
+						<img [src]="teamMember.url" width="56" height="56"  alt="" class="team-member" *ngFor="let teamMember of sprint.team">
+        </div>
+					</div>
+				</div>
+		</ng-container>
+	</div>
+</div>
+-->

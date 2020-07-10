@@ -1,0 +1,13 @@
+#chart-wrap {
+    // max-width: 850px;
+    border: dashed 1px;
+}
+.x.axis{
+  border: dashed 2px red;
+}
+g.x.axis text {
+    cursor: pointer;
+}
+.timeline-pointer {
+  transition: 1s transform;
+}

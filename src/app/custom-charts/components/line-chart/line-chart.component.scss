@@ -1,0 +1,24 @@
+:host ::ng-deep {
+  .dot-hover {
+    fill: #6ff743;
+    stroke: #010202;
+    stroke-width: 2;
+    cursor: pointer;
+  }
+  line .grid-line {
+    stroke: steelblue;
+  }
+  .summer {
+    fill: yellow;
+  }
+  .autumn {
+    fill: lightcoral
+  }
+  .spring {
+    fill: #6ff743;
+  }
+  .winter {
+    fill: silver; 
+  }
+
+}

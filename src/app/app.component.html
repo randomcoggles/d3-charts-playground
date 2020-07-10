@@ -1,0 +1,57 @@
+<mat-toolbar class="example-header" color="primary">
+	<span class="menu-icon" (click)="sidenav.toggle()"></span>
+  <button 
+     routerLink="home"
+    color="primary" 
+    class="mat-elevation-z0"
+    aria-label="Home"
+    mat-mini-fab 
+    >
+    <mat-icon>home</mat-icon>
+  </button>
+   &nbsp;   
+	<span class="header-title" routerLink="home">{{name}}</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="page-main">
+	<mat-sidenav #sidenav [mode]="mode.value" [opened]="opened">
+		<mat-list class="side-menu">
+			<mat-list-item routerLink="home" routerLinkActive="active">
+        <mat-icon class="material-icons tile-icon">highlight</mat-icon> &nbsp;
+        Highlights
+      </mat-list-item>
+			<mat-list-item routerLink="simple-charts">
+        <mat-icon class="material-icons tile-icon">scatter_plot</mat-icon> &nbsp;
+        Simple charts
+      </mat-list-item>
+			<mat-list-item routerLink="interactive-charts">
+        <mat-icon class="material-icons tile-icon">mouse</mat-icon> &nbsp;
+        Interactive charts
+      </mat-list-item>
+			<mat-list-item routerLink="custom-charts">
+        <mat-icon class="material-icons tile-icon">show_chart</mat-icon> &nbsp;
+        Custom charts
+      </mat-list-item>
+			<mat-list-item routerLink="calendar">
+        <mat-icon class="material-icons tile-icon">calendar_today</mat-icon> &nbsp;
+        Calendar
+      </mat-list-item>
+			<mat-list-item routerLink="sprint-timeline">
+        <mat-icon class="material-icons tile-icon">timeline</mat-icon> &nbsp;
+        Sprint timeline
+      </mat-list-item>
+			<mat-list-item routerLink="curriculum" >
+        <mat-icon class="material-icons tile-icon">file</mat-icon> &nbsp;
+        Curriculum
+      </mat-list-item>
+		</mat-list>
+	</mat-sidenav>
+
+	<mat-sidenav-content class=" flex side-nav-container">
+		<div class="flex page-main-content">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-toolbar class="example-footer" color="primary">Footer</mat-toolbar>

@@ -1,0 +1,192 @@
+<div class="component-wrap">
+	<h1>Sprints timeline...</h1>
+
+	<div class="sprints-wrap flex-row">
+		<div class="left-side">
+			<ng-container *ngFor="let sprint of sprints; let i = index">
+				<section class="timeline-item flex-col" *ngIf="i%2 === 0">
+					<header class="sprint-header flex-col">
+						<div class="date-container">
+							<h2 class="date">{{sprint.startDate}}
+								<svg width="60" height="160" xmlns="http://www.w3.org/2000/svg" class="left-branch">
+									<path transform="scale(1, -1) translate(0, -100)" d="M 6 10 C 79 0, 34 100, 63 160"
+										stroke-width="6" stroke="#ec407aff" fill="transparent"
+										style="transform: translate(-2px, -6px);"></path>
+								</svg>
+							</h2>
+							<div class="completion-percent-wrap">
+								<span class="completion-percent">{{sprint.percentageComplete}}%</span>
+							</div>
+
+						</div>
+						<h3 class="sprint-title">{{sprint.title}}</h3>
+						<p class="sprint-summary">{{sprint.retrospective?.summaryPhrase}}</p>
+					</header>
+
+					<div class="content">
+						<ul class="objectives">
+							<li *ngFor="let objective of sprint.objectives">
+								{{objective}}
+							</li>
+						</ul>
+
+						<div *ngIf="sprint.retrospective" class="retrospective flex-col">
+							<div class="retro-tabs flex-row bold">
+								<a href="javascript:void(0)" class="green"
+									[ngClass]="{active: sprint.retrospective.showing === 'green'}"
+									(click)="sprint.retrospective.showing = 'green'">{{sprint.retrospective.green.title}}</a>
+								<a href="javascript:void(0)" class="blue"
+									[ngClass]="{active: sprint.retrospective.showing === 'blue'}"
+									(click)="sprint.retrospective.showing = 'blue'">{{sprint.retrospective.blue.title}}</a>
+								<a href="javascript:void(0)" class="red"
+									[ngClass]="{active: sprint.retrospective.showing === 'red'}"
+									(click)="sprint.retrospective.showing = 'red'">{{sprint.retrospective.red.title}}</a>
+							</div>
+
+							<div class="retro-content">
+								<div class="green" *ngIf="sprint.retrospective.showing === 'green'">
+									<ul class="retro-items">
+										<li *ngFor="let item of sprint.retrospective.green.items | slice:0:3;">
+											{{item}}
+										</li>
+									</ul>
+
+								</div>
+								<div class="blue" *ngIf="sprint.retrospective.showing === 'blue'">
+									<ul class="retro-items">
+										<li *ngFor="let item of sprint.retrospective.blue.items | slice:0:3;">
+											{{item}}
+										</li>
+									</ul>
+
+								</div>
+								<div class="red" *ngIf="sprint.retrospective.showing === 'red'">
+									<ul class="retro-items">
+										<li *ngFor="let item of sprint.retrospective.red.items | slice:0:3;">
+											{{item}}
+										</li>
+									</ul>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<footer class="card-footer">
+						<div class="team-wrap flex-row wrap">
+							<img [src]="teamMember.url" width="56" height="56"  alt="" class="team-member" *ngFor="let teamMember of sprint.team">
+          </div>
+					</footer>
+				</section>
+			</ng-container>
+		</div>
+
+		<div class="middle-side">
+			<div class="timeline-bubble">
+
+				<button
+          title="Start a new sprint"
+            color="primary"
+            class="mat-elevation-z0 print-button"
+            aria-label="Print"
+            mat-mini-fab
+            >
+            <mat-icon>add</mat-icon>
+          </button>
+			</div>
+		</div>
+
+		<div class="right-side">
+			<div class="timeline-item half flex-col center">
+				<p><span class="bold">Sprints timeline</span> is here to help you have a <u>better insights</u> on
+					what's going
+					on
+					thoughtout sprint. It's going to help your <u>identify recurrent problems</u> and find a way to
+					solve them.
+				</p>
+			</div>
+			<ng-container *ngFor="let sprint of sprints; let i = index">
+				<section class="timeline-item flex-col" *ngIf="i%2 === 1">
+					<header class="sprint-header flex-col">
+						<div class="date-container">
+							<h2 class="date">
+
+								<svg _ngcontent-qiq-c229="" width="60" height="160" xmlns="http://www.w3.org/2000/svg"
+									class="right-branch">
+									<path d="M -4 171 C 40 119, -8 10 61 25" stroke-width="6" stroke="#ec407aff"
+										fill="transparent">
+									</path>
+								</svg>
+								{{sprint.startDate}}
+							</h2>
+
+						</div>
+						<h3 class="sprint-title">{{sprint.title}}</h3>
+						<p class="sprint-summary">{{sprint.retrospective?.summaryPhrase}}</p>
+					</header>
+
+
+					<div class="content">
+						<ul class="objectives">
+							<li *ngFor="let objective of sprint.objectives">
+								{{objective}}
+							</li>
+						</ul>
+
+						<div *ngIf="sprint.retrospective" class="retrospective flex-col">
+							<div class="retro-tabs flex-row bold">
+								<a href="javascript:void(0)" class="green"
+									[ngClass]="{active: sprint.retrospective.showing === 'green'}"
+									(click)="sprint.retrospective.showing = 'green'">{{sprint.retrospective.green.title}}</a>
+								<a href="javascript:void(0)" class="blue"
+									[ngClass]="{active: sprint.retrospective.showing === 'blue'}"
+									(click)="sprint.retrospective.showing = 'blue'">{{sprint.retrospective.blue.title}}</a>
+								<a href="javascript:void(0)" class="red"
+									[ngClass]="{active: sprint.retrospective.showing === 'red'}"
+									(click)="sprint.retrospective.showing = 'red'">{{sprint.retrospective.red.title}}</a>
+							</div>
+
+							<div class="retro-content">
+								<div class="green" *ngIf="sprint.retrospective.showing === 'green'">
+									<ul class="retro-items">
+										<li *ngFor="let item of sprint.retrospective.green.items | slice:0:3;">
+											{{item}}
+										</li>
+									</ul>
+
+								</div>
+								<div class="blue" *ngIf="sprint.retrospective.showing === 'blue'">
+									<ul class="retro-items">
+										<li *ngFor="let item of sprint.retrospective.blue.items | slice:0:3;">
+											{{item}}
+										</li>
+									</ul>
+
+								</div>
+								<div class="red" *ngIf="sprint.retrospective.showing === 'red'">
+									<ul class="retro-items">
+										<li *ngFor="let item of sprint.retrospective.red.items | slice:0:3;">
+											{{item}}
+										</li>
+									</ul>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+					<footer class="card-footer">
+						<div class="team-wrap flex-row wrap">
+							<img [src]="teamMember.url" width="56" height="56"  alt="" class="team-member" *ngFor="let teamMember of sprint.team">
+          </div>
+					</footer>
+				</section>
+			</ng-container>
+		</div>
+
+	</div>
+
+</div>

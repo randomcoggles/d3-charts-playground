@@ -1,0 +1,43 @@
+<!-- <app-recurrence-config></app-recurrence-config> -->
+    <p>
+      <mat-button-toggle-group name="fontStyle" value="recurrence.days" aria-label="Font Style" multiple="true" (change)="weekSelectionOnchange($event)" >
+        <mat-button-toggle value="0">Dom</mat-button-toggle>
+        <mat-button-toggle value="1">Seg</mat-button-toggle>
+        <mat-button-toggle value="2">Ter</mat-button-toggle>
+        <mat-button-toggle value="3">Qua</mat-button-toggle>
+        <mat-button-toggle value="4">Qui</mat-button-toggle>
+        <mat-button-toggle value="5">Sex</mat-button-toggle>
+        <mat-button-toggle value="6">Sab</mat-button-toggle>
+      </mat-button-toggle-group>
+    </p>
+    <mat-spinner *ngIf="spinnerIsOn" mode="indeterminate"></mat-spinner>
+
+ <table class="calendar" border="0">
+  <tr *ngFor="let event of calendar" [ngClass]="{'has-event': event.event, holiday: event.holiday, weekend: event.date.appIsWeekend, 'week-day': !event.date.appIsWeekend}">
+    <td class="date" [ngClass]="{'weekend': event.date.appIsWeekend}" >{{event.dateStr}} </td>
+    
+    <td class="day-of-week" >
+      <span >{{event?.date?.appDayOfWeek}}</span>
+    </td>
+
+    <td class="event" >
+        <button *ngIf="!event.date.appIsWeekend" [matMenuTriggerFor]="menu" mat-icon-button color="primary" >
+          <mat-icon *ngIf="!event.event">add</mat-icon>
+          <mat-icon *ngIf="event.event">edit</mat-icon>
+        </button>        
+        <button *ngIf="event.date.appIsWeekend" title="Events on weekends are not allowed" mat-icon-button color="primary" class="btn-weekend" ></button>
+        <mat-menu #menu="matMenu" class="actions-panel">          
+          <button mat-menu-item>
+            <mat-checkbox class="event-action" [(ngModel)]="event?.event?.actions[0].selected" >Action A</mat-checkbox>
+          </button> 
+          <button mat-menu-item [disabled]="!event.isBusinessDay" title="You can't use action B on holidays.">
+            <mat-checkbox class="event-action" [(ngModel)]="event?.event?.actions[1].selected">Action B</mat-checkbox>
+          </button> 
+          <button mat-menu-item>
+            <mat-checkbox class="event-action" [(ngModel)]="event?.event?.actions[2].selected">Action C</mat-checkbox>
+          </button>
+        </mat-menu>
+    </td>
+    <td>{{ event.holiday ? event.holiday.title : '' }}</td>
+  </tr>
+</table>

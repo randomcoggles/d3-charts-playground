@@ -1,0 +1,97 @@
+.component-wrap {
+  padding: 8px;
+  // display: flex;
+  // justify-content: center;
+}
+
+.container {
+  min-height: 200px;
+  -webkit-perspective: 1800;
+  // -webkit-animation: spin-perspective 20s infinite linear;  
+  -webkit-perspective-origin: 50% -225px;
+  // border: dashed 1px;
+  // background-color: #cf97c2;
+  .tiles.three-d-effect {
+    position: relative;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: spin 8s infinite linear;
+    > li {
+      
+    list-style: none;
+    box-shadow: 0px 0px 3px grey;
+    border-radius: 8px;
+    padding: 16px;
+    background-color:  #ff3e3e;
+    color: #fff;
+    cursor: pointer;
+    max-width: 160px;
+    margin: 8px;     
+    position: absolute;
+    height: 158px;
+    width: 158px;
+    -webkit-border-radius: 12px;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+    -webkit-transition: -webkit-transform 2s;
+    -webkit-backface-visibility: true;
+    .card-content {
+      text-align: center;
+    }
+    .tile-icon {
+      font-size: 64px;
+      width: initial!important;
+    }
+      &.backface{
+        .item-content-wrap{
+          position: absolute;
+          height: 160px;
+          width: 160px;
+          -webkit-border-radius: 12px;
+          -webkit-box-sizing: border-box;
+          text-align: center;
+          box-shadow: 0px 0px 4px #009688ba;
+          -webkit-transition: -webkit-transform 2s;
+          -webkit-transform: rotateY(190deg) !important;
+          margin-top: -17px;
+          margin-left: -17px;
+          box-shadow: 0 0 2px #000;
+          -webkit-backface-visibility: false;
+        }
+      }
+      
+    &:hover {
+      background-color: #009688;
+      transform: translate(2px, -2px) scale(1.03);
+    }
+    }
+    
+    
+  }
+}
+
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotateY(0); }
+  to   { -webkit-transform: rotateY(-360deg); }
+}
+@-webkit-keyframes spin-perspective {
+  0% { 
+    -webkit-perspective: 800;
+    -webkit-perspective-origin: 50% 225px;
+  }
+  50%   { 
+    -webkit-perspective: 1800;
+    -webkit-perspective-origin: 50% -225px;
+  }
+  100% { 
+    -webkit-perspective: 800;
+    -webkit-perspective-origin: 50% 225px;
+  }
+}
+app-carroussel-ccontroller {
+  position: absolute;
+  z-index: 999;
+}

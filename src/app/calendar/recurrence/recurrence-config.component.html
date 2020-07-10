@@ -1,0 +1,17 @@
+<div class="flex">
+  <div class="recurrence-type">
+    <mat-radio-group aria-label="Select an option" class="flex-col">
+      <mat-radio-button value="daily" >Daily</mat-radio-button>
+      <mat-radio-button value="weekly" >Weekly</mat-radio-button>
+      <mat-radio-button value="monthly" >Monthly</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="recurrence-config">
+    <mat-form-field class="example-full-width">
+      <mat-label>Postal Code</mat-label>
+      <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+    </mat-form-field>
+  </div>
+
+</div>

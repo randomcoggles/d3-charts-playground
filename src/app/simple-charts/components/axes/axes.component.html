@@ -1,0 +1,31 @@
+<div class="d-flex w-full">
+	<div class="charts-div">
+		<h3>Linear scale</h3>
+		<svg class="svg-canvas" [attr.viewBox]="getViewBox()" xmlns="http://www.w3.org/2000/svg" #svgSimpleAxes></svg>
+	</div>
+	<div class="charts-div">
+		<h3>Time scale</h3>
+		<svg class="svg-canvas" [attr.viewBox]="getViewBox()" xmlns="http://www.w3.org/2000/svg" #svgDateAxes></svg>
+	</div>
+</div>
+
+<div class="d-flex w-full">
+	<div class="charts-div">
+		<app-simple-bubble-chart></app-simple-bubble-chart>
+	</div>
+	<div class="charts-div">
+		<app-simple-line-chart></app-simple-line-chart>
+	</div>
+</div>
+<div class="d-flex w-full">
+	<div class="charts-div">
+		<app-bar-chart></app-bar-chart>
+	</div>
+	<div class="charts-div">
+		<app-basic-chart></app-basic-chart>
+	</div>
+</div>
+
+<div class="d-flex w-full">
+  <app-timeline class="d-flex w-full"></app-timeline>
+</div>

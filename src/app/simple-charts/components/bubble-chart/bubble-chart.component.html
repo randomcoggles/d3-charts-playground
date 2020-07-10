@@ -1,0 +1,7 @@
+<h3>Bubble chart</h3>
+<svg class="svg-canvas" [attr.viewBox]="getViewBox()" xmlns="http://www.w3.org/2000/svg" #svgBubbleChart>
+  <g class="bubbles-group">
+    <!-- Tring using angular instead of d3 for drawing bubbles -->
+    <circle *ngFor="let bubble of data" [attr.dx]="bubble.value" [attr.dy]="bubble.score"  class="bubble" stroke="blue" stroke-width=1 style="fill: lightblue; opacity: 0.7;"></circle>
+  </g>
+</svg>

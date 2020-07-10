@@ -1,0 +1,130 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h2 class="text-center"> Start new sprint</h2>
+	<section class="form-section fields-wrap">
+
+		<mat-form-field class="input-container block">
+      <mat-label>Sprint name</mat-label>
+			<input
+      matInput
+      autofocus
+      autocomplete="off"
+      formControlName="title"
+      required
+      minlength="3"
+      maxlength="65"
+      />
+
+			<mat-hint align="end" *ngIf="f.title.dirty">
+				{{f.title.value.length}} of 65 characters
+			</mat-hint>
+			<mat-hint align="start" *ngIf="f.title.dirty && f.title.errors">
+				<div *ngIf="f.title.errors.minlength" class="error-msg">At least 3 characters</div>
+				<div *ngIf="f.title.errors.required" class="error-msg">FirstName is required</div>
+			</mat-hint>
+		</mat-form-field>
+    <app-team-member-selector></app-team-member-selector>
+	
+  </section>
+	<section class="server-msg-container"
+		*ngIf="submitMessages.error || submitMessages.success || submitMessages.waiting">
+		<p *ngIf="submitMessages.success" class="alert alert-success"> {{ submitMessages.success }} </p>
+		<p *ngIf="submitMessages.waiting" class="alert alert-info"> {{submitMessages.waiting}}</p>
+		<p *ngIf="submitMessages.error" class="alert alert-danger">{{ submitMessages.error }}</p>
+	</section>
+
+	<div class="form-group center">
+		<button mat-raised-button color="warn">Cancel(Esc)</button>
+
+		<button mat-raised-button type="button" color="primary"
+        [disabled]="submitted && form.invalid"
+        [title]="form.invalid ? 'All fields must be valid' : 'Submit form'"
+        (click)="onSubmit()">
+        <mat-icon aria-label="Add todo icon"><i class="material-icons rotate-minus-30">directions_run</i></mat-icon>
+        <span *ngIf="submitMessages.waiting" class="spinner-border spinner-border-sm mr-1"></span>
+        Start sprint
+      </button>
+
+
+		<!-- <button mat-raised-button color="warn" (click)="hitHttpCall()">Hit request</button> -->
+
+	</div>
+
+
+</form>
+<!--
+   {
+      "title": "Sprint 06 - Project remodulation",
+      "startDate": "2020-05-11",
+      "endDate": "2020-05-25",
+      "objectives": [
+         "Refactor site modules, making them lazy loaded.",
+         "Provide users with ability to renew their session.",
+         "Upgrade side and top navigation."
+      ],
+      "percentageComplete": 30,
+      "team": [
+         {
+            "name": "Itamar Serafim",
+                        "id": 1,
+            "url": "https://randomuser.me/api/portraits/men/73.jpg"
+         },
+         {
+            "name": "Denison Junior",
+                        "id": 2,
+            "url": "https://randomuser.me/api/portraits/men/60.jpg"
+         },
+         {
+            "name": "Anderson Kobayashi",
+            "id": 3,
+            "url": "https://randomuser.me/api/portraits/men/90.jpg"
+         },
+         {
+            "name": "Pedro Costa",
+             "id": 4,
+            "url": "https://randomuser.me/api/portraits/men/44.jpg"
+         },
+         {
+            "name": "Érica Lima",
+            "id": 5,
+            "url": "https://randomuser.me/api/portraits/women/29.jpg"
+         },
+         {
+            "name": "Vinícius Gimenez",
+            "id": 6,
+            "url": "https://randomuser.me/api/portraits/men/52.jpg"
+         },
+         {
+            "name": "Bruno Severino",
+            "id": 7,
+            "url": "https://randomuser.me/api/portraits/men/81.jpg"
+         }
+      ],
+      "retrospective": {
+         "summaryPhrase": "Adoption of new techniques",
+         "green": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "red": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "blue": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         }
+      }
+   }
+   -->

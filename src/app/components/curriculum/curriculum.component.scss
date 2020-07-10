@@ -1,0 +1,96 @@
+.row {
+  display: flex;
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.page-header {
+  max-width: 860px;
+  margin: 0 auto;
+  margin-top: 56px;
+  justify-content: space-between;
+  .page-title {
+    text-align: right;
+  }
+  .name {
+    font-size: 54px;
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+  }
+}
+.header-flags {
+  margin-right: 8px;
+  padding-bottom: 3px;
+  cursor: pointer;
+  &.active {
+    border-bottom: solid #020080;
+    &::after {
+      border: solid 7px transparent;
+      border-bottom-color: #020080;
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      margin-left: -19px;
+      margin-top: 15px;
+    }
+  }
+  
+  img {
+    border-radius: 8px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
+  }
+}
+.c-section {
+  max-width: 860px;
+  margin: 0 auto;
+  .section-title {
+      font-size: 42px;
+      margin-bottom: 8px;
+      border-bottom: 4px solid;
+      font-family: cursive;
+      margin-top: 16px;
+  }
+}
+.p-data-item-tile {
+  font-weight: bold;
+}
+.summary-list {
+  padding-left: 15px;
+  li { list-style: none;}
+}
+.date-range {
+    min-width: 170px;
+    display: flex;
+    padding-top: 16px;
+    font-weight: bold;
+}
+
+.experience-title {
+    font-weight: bold;
+    .company-name {
+      padding-top: 0;
+    }
+}
+.bold {
+  font-weight: bold;
+}
+.last-updated {
+    font-style: italic;
+}
+.print-button {
+    position: fixed;
+    top: 80px;
+}
+img.company-logo {
+    width: 30px;
+    border-radius: 8px;
+}
+.assignments {
+    font-weight: bold;
+}
+.btn-more { display: none;}

@@ -1,0 +1,40 @@
+<div 
+  class="component-wrap"
+  (mouseenter)="showController = true"
+  (mouseleave)="showController = false"
+  >
+  <app-carroussel-ccontroller #carouselCtrlr [hidden]="!showController">
+  </app-carroussel-ccontroller>
+<div class="container" #container 
+  [style.perspectiveOrigin]="tcManager.perspectiveOrigin"
+  [style.perspective]="tcManager.perspective"
+  
+>
+	<ul class="tiles three-d-effect" [style.animationDuration]="speed">
+		<li 
+      [style.transform]="item.transform"
+      [style.backgroundColor]="item.bgColor"
+      ui-sref="bubble-chart" class="one" 
+      *ngFor="let item of data">
+			<h4 class="tile-title">{{item.title}}</h4>
+			<p class="card-content">
+        <mat-icon class="material-icons tile-icon">{{item.icon}}</mat-icon>
+      </p>
+    </li>
+		<li
+      ui-sref="multiline-chart" 
+      class="five backface" 
+      *ngFor="let item of data"
+      [style.transform]="item.bkPtransform" 
+      [style.backgroundColor]="item.bfbgColor"
+      >
+			<div class="item-content-wrap" >
+				<h6 class="tile-title">{{item.title}}</h6>
+				<p class="card-content" *ngFor="let word of item.catchyWords">{{word}}</p>
+			</div>
+		</li> 
+	</ul>
+</div>
+
+</div>
+ <!-- {{tcManager.perspectiveOrigin}} -->

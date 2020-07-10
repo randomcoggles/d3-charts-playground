@@ -1,0 +1,69 @@
+<h3 class="text-center">Custom line chart </h3>
+<div class="chart-wrap">
+	<svg #svgWrap class="svg-canvas" [attr.viewBox]="getViewBox()" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <g *ngFor="let season of seasons; let i = index" [attr.transform]="'translate(' + (i * 100) + ', 0)'">
+        <rect [attr.fill]="season.color" width="25" height="25" ></rect> <text transform="translate(30, 20)" >{{season.season}}</text>
+      </g>
+    </g>
+		<g transform="translate(-89.282001,-541.64419) ">
+			<g xmlns="http://www.w3.org/2000/svg" id="smiley-sad" transform="translate(-89.282001,-541.64419)">
+      <title>I'm sad!</title>
+				<circle r="15.714286" cy="558.07648" cx="105.71429" id="circle4289"
+					style="fill:#F44336;fill-opacity:1;stroke:#000000;stroke-width:1.43599999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+				<g style="fill:#000000;fill-opacity:1" transform="translate(-403.92488,351.56832)" id="g4291">
+					<circle
+						style="fill:#000000;fill-opacity:1;stroke:#830000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222"
+						id="circle4293" cx="502.67487" cy="202.18675" r="3.75" />
+					<circle r="3.75" cy="202.18675" cx="516.60345" id="circle4295"
+						style="fill:#000000;fill-opacity:1;stroke:#830000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+				</g>
+				<path xmlns="http://www.w3.org/2000/svg" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.84289622;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" d="M 16.433594 20.953125 A 9.2238949 9.2238949 0 0 0 7.7539062 27.083984 L 8.5527344 27.083984 A 9.2238949 9.2238949 0 0 1 8.6582031 26.916016 A 8.6869643 9.2663644 0 0 1 16.400391 21.832031 A 8.6869643 9.2663644 0 0 1 22.882812 24.951172 A 9.2238949 9.2238949 0 0 1 24.560547 27.083984 L 25.111328 27.083984 A 9.2238949 9.2238949 0 0 0 16.433594 20.953125 z " transform="translate(89.282001,541.64419)" id="path4297"/>
+			</g> 
+      <g xmlns="http://www.w3.org/2000/svg" id="smiley-happy" transform="translate(-89.282001,-541.64419)" >
+      <title>I'm Happy!!!</title>
+				<circle r="15.714286" cy="558.07648" cx="105.71429" id="circle4289"
+					style="fill:#03A9F4;fill-opacity:1;stroke:#000000;stroke-width:1.43599999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+				<g style="fill:#000000;fill-opacity:1" transform="translate(-403.92488,351.56832)" id="g4291">
+					<circle
+						style="fill:#000000;fill-opacity:1;stroke:#830000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222"
+						id="circle4293" cx="502.67487" cy="202.18675" r="3.75" />
+					<circle r="3.75" cy="202.18675" cx="516.60345" id="circle4295"
+						style="fill:#000000;fill-opacity:1;stroke:#830000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+				</g>
+			<path id="path4309"
+					d="m 95.149818,562.28743 a 11.227615,11.227615 0 0 0 10.566562,7.46441 11.227615,11.227615 0 0 0 10.56237,-7.46441 l -21.128932,0 z"
+					style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.02599978;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+			</g> 
+			 <g xmlns="http://www.w3.org/2000/svg" id="smiley-neutral" transform="translate(-89.282001,-541.64419)" >
+       <title>I'm neutral</title>
+				<circle r="15.714286" cy="558.07648" cx="105.71429" id="circle4289"
+					style="fill:#4DD0E1;fill-opacity:1;stroke:#000000;stroke-width:1.43599999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+				<g style="fill:#000000;fill-opacity:1" transform="translate(-403.92488,351.56832)" id="g4291">
+					<circle
+						style="fill:#000000;fill-opacity:1;stroke:#830000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222"
+						id="circle4293" cx="502.67487" cy="202.18675" r="3.75" />
+					<circle r="3.75" cy="202.18675" cx="516.60345" id="circle4295"
+						style="fill:#000000;fill-opacity:1;stroke:#830000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+				</g>
+				<ellipse ry="2.9935503" rx="6.689743" cy="565.12646" cx="105.71429" id="ellipse4326"
+					style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.82667911;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+			</g>      
+			<g xmlns="http://www.w3.org/2000/svg" id="smiley-worried" transform="translate(-89.282001,-541.64419)" >
+      <title>I'm worried!!</title>
+				<circle r="15.714286" cy="558.07648" cx="105.71429" id="circle4289"
+					style="fill:#FFC107;fill-opacity:1;stroke:#000000;stroke-width:1.43599999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+				<g style="fill:#000000;fill-opacity:1" transform="translate(-403.92488,351.56832)" id="g4291">
+					<circle
+						style="fill:#000000;fill-opacity:1;stroke:#830000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222"
+						id="circle4293" cx="502.67487" cy="202.18675" r="3.75" />
+					<circle r="3.75" cy="202.18675" cx="516.60345" id="circle4295"
+						style="fill:#000000;fill-opacity:1;stroke:#830000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+				</g>
+			<rect y="563.80103" x="97.506767" height="3.2829957" width="16.414978" id="rect4343"
+					style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.70222222" />
+			</g>
+		</g>
+
+	</svg>
+</div>

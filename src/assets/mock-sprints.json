@@ -1,0 +1,452 @@
+[
+   {
+      "title": "Sprint 01 - Project Kick Start",
+      "startDate": "2020-03-07",
+      "endDate": "2020-03-17",
+      "objectives": [
+         "Objective 0ne here",
+         "Objective two here",
+         "Objective three here"
+      ],
+      "percentageComplete": 90,
+      "team": [
+         {
+            "name": "Itamar Serafim",
+            "id": 1,
+            "url": "https://randomuser.me/api/portraits/men/73.jpg"
+         },
+         {
+            "name": "Denison Junior",
+            "id": 2,
+            "url": "https://randomuser.me/api/portraits/men/60.jpg"
+         },
+         {
+            "name": "Anderson Kobayashi",
+            "id": 3,
+            "url": "https://randomuser.me/api/portraits/men/90.jpg"
+         },
+         {
+            "name": "Pedro Costa",
+             "id": 4,
+            "url": "https://randomuser.me/api/portraits/men/44.jpg"
+         },
+         {
+            "name": "Érica Lima",
+            "id": 5,
+            "url": "https://randomuser.me/api/portraits/women/29.jpg"
+         },
+         {
+            "name": "Vinícius Gimenez",
+            "id": 6,
+            "url": "https://randomuser.me/api/portraits/men/52.jpg"
+         },
+         {
+            "name": "Bruno Severino",
+            "id": 7,
+            "url": "https://randomuser.me/api/portraits/men/81.jpg"
+         }
+      ],
+      "retrospective": {
+         "summaryPhrase": "This was an amazing sprint",
+         "green": {
+            "title": "Fizemos bem",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "red": {
+            "title": "Devemos melhorar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "blue": {
+            "title": "Decisões possíveis",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         }
+      }
+   },
+   {
+      "title": "Sprint 02 - Aréa logada",
+      "startDate": "2020-03-17",
+      "endDate": "2020-03-27",
+      "objectives": [
+         "Objective 0ne here",
+         "Objective two here",
+         "Objective three here"
+      ],
+      "percentageComplete": 45,
+      "team": [
+         {
+            "name": "Itamar Serafim",            
+            "id": 1,
+            "url": "https://randomuser.me/api/portraits/men/73.jpg"
+         },
+         {
+            "name": "Denison Junior",
+            "id": 2,
+            "url": "https://randomuser.me/api/portraits/men/60.jpg"
+         },
+         {
+            "name": "Anderson Kobayashi",
+            "id": 3,
+            "url": "https://randomuser.me/api/portraits/men/90.jpg"
+         },
+         {
+            "name": "Pedro Costa",
+             "id": 4,
+            "url": "https://randomuser.me/api/portraits/men/44.jpg"
+         },
+         {
+            "name": "Érica Lima",
+            "id": 5,
+            "url": "https://randomuser.me/api/portraits/women/29.jpg"
+         },
+         {
+            "name": "Vinícius Gimenez",
+            "id": 6,
+            "url": "https://randomuser.me/api/portraits/men/52.jpg"
+         },
+         {
+            "name": "Bruno Severino",
+            "id": 7,
+            "url": "https://randomuser.me/api/portraits/men/81.jpg"
+         }
+      ],
+      "retrospective": {
+         "summaryPhrase": "We learn good lessons",
+         "green": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "red": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "blue": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         }
+      }
+   },
+   {
+      "title": "Sprint 03 - Início dashboard",
+      "startDate": "2020-03-27",
+      "endDate": "2020-04-13",
+      "objectives": [
+         "Objective 0ne here",
+         "Objective two here",
+         "Objective three here"
+      ],
+      "percentageComplete": 50,
+      "team": [
+         {
+            "name": "Itamar Serafim",
+                        "id": 1,
+            "url": "https://randomuser.me/api/portraits/men/73.jpg"
+         },
+         {
+            "name": "Denison Junior",
+                        "id": 2,
+            "url": "https://randomuser.me/api/portraits/men/60.jpg"
+         },
+         {
+            "name": "Anderson Kobayashi",
+            "id": 3,
+            "url": "https://randomuser.me/api/portraits/men/90.jpg"
+         },
+         {
+            "name": "Pedro Costa",
+             "id": 4,
+            "url": "https://randomuser.me/api/portraits/men/44.jpg"
+         },
+         {
+            "name": "Érica Lima",
+            "id": 5,
+            "url": "https://randomuser.me/api/portraits/women/29.jpg"
+         },
+         {
+            "name": "Vinícius Gimenez",
+            "id": 6,
+            "url": "https://randomuser.me/api/portraits/men/52.jpg"
+         },
+         {
+            "name": "Bruno Severino",
+            "id": 7,
+            "url": "https://randomuser.me/api/portraits/men/81.jpg"
+         }
+      ],
+      "retrospective": {
+         "summaryPhrase": "Adoption of new techniques",
+         "green": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "red": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "blue": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         }
+      }
+   },
+   {
+      "title": "Sprint 04 - New people in the team",
+      "startDate": "2020-04-27",
+      "endDate": "2020-05-11",
+      "objectives": [
+         "Objective 0ne here",
+         "Objective two here",
+         "Objective three here"
+      ],
+      "percentageComplete": 100,
+      "team": [
+         {
+            "name": "Itamar Serafim",
+                        "id": 1,
+            "url": "https://randomuser.me/api/portraits/men/73.jpg"
+         },
+         {
+            "name": "Denison Junior",
+                        "id": 2,
+            "url": "https://randomuser.me/api/portraits/men/60.jpg"
+         },
+         {
+            "name": "Anderson Kobayashi",
+            "id": 3,
+            "url": "https://randomuser.me/api/portraits/men/90.jpg"
+         },
+         {
+            "name": "Pedro Costa",
+             "id": 4,
+            "url": "https://randomuser.me/api/portraits/men/44.jpg"
+         },
+         {
+            "name": "Érica Lima",
+            "id": 5,
+            "url": "https://randomuser.me/api/portraits/women/29.jpg"
+         },
+         {
+            "name": "Vinícius Gimenez",
+            "id": 6,
+            "url": "https://randomuser.me/api/portraits/men/52.jpg"
+         },
+         {
+            "name": "Bruno Severino",
+            "id": 7,
+            "url": "https://randomuser.me/api/portraits/men/81.jpg"
+         }
+      ],
+      "retrospective": {
+         "summaryPhrase": "Adoption of new techniques",
+         "green": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "red": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "blue": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         }
+      }
+   },
+   {
+      "title": "Sprint 05 - Project remodulation",
+      "startDate": "2020-05-11",
+      "endDate": "2020-05-25",
+      "objectives": [
+         "Refactor site modules, making them lazy loaded.",
+         "Provide users with ability to renew their session.",
+         "Upgrade side and top navigation."
+      ],
+      "percentageComplete": 30,
+      "team": [
+         {
+            "name": "Itamar Serafim",
+                        "id": 1,
+            "url": "https://randomuser.me/api/portraits/men/73.jpg"
+         },
+         {
+            "name": "Denison Junior",
+                        "id": 2,
+            "url": "https://randomuser.me/api/portraits/men/60.jpg"
+         },
+         {
+            "name": "Anderson Kobayashi",
+            "id": 3,
+            "url": "https://randomuser.me/api/portraits/men/90.jpg"
+         },
+         {
+            "name": "Pedro Costa",
+             "id": 4,
+            "url": "https://randomuser.me/api/portraits/men/44.jpg"
+         },
+         {
+            "name": "Érica Lima",
+            "id": 5,
+            "url": "https://randomuser.me/api/portraits/women/29.jpg"
+         },
+         {
+            "name": "Vinícius Gimenez",
+            "id": 6,
+            "url": "https://randomuser.me/api/portraits/men/52.jpg"
+         },
+         {
+            "name": "Bruno Severino",
+            "id": 7,
+            "url": "https://randomuser.me/api/portraits/men/81.jpg"
+         }
+      ],
+      "retrospective": {
+         "summaryPhrase": "Adoption of new techniques",
+         "green": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "red": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "blue": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         }
+      }
+   },
+   {
+      "title": "Sprint 06 - Project remodulation",
+      "startDate": "2020-05-11",
+      "endDate": "2020-05-25",
+      "objectives": [
+         "Refactor site modules, making them lazy loaded.",
+         "Provide users with ability to renew their session.",
+         "Upgrade side and top navigation."
+      ],
+      "percentageComplete": 30,
+      "team": [
+         {
+            "name": "Itamar Serafim",
+                        "id": 1,
+            "url": "https://randomuser.me/api/portraits/men/73.jpg"
+         },
+         {
+            "name": "Denison Junior",
+                        "id": 2,
+            "url": "https://randomuser.me/api/portraits/men/60.jpg"
+         },
+         {
+            "name": "Anderson Kobayashi",
+            "id": 3,
+            "url": "https://randomuser.me/api/portraits/men/90.jpg"
+         },
+         {
+            "name": "Pedro Costa",
+             "id": 4,
+            "url": "https://randomuser.me/api/portraits/men/44.jpg"
+         },
+         {
+            "name": "Érica Lima",
+            "id": 5,
+            "url": "https://randomuser.me/api/portraits/women/29.jpg"
+         },
+         {
+            "name": "Vinícius Gimenez",
+            "id": 6,
+            "url": "https://randomuser.me/api/portraits/men/52.jpg"
+         },
+         {
+            "name": "Bruno Severino",
+            "id": 7,
+            "url": "https://randomuser.me/api/portraits/men/81.jpg"
+         }
+      ],
+      "retrospective": {
+         "summaryPhrase": "Adoption of new techniques",
+         "green": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "red": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         },
+         "blue": {
+            "title": "Foi bom, devemos continuar",
+            "items": [
+               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+               "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+               "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores"
+            ]
+         }
+      }
+   }
+]

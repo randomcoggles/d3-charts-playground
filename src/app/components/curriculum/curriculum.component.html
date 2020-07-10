@@ -1,0 +1,1082 @@
+<div *ngIf="lang === 'en'" #wrap>
+
+	<div class="container">
+		<header class="row page-header">
+			<div class="logo">
+				<img width="270" src="./assets/images/icon-curriculum-header.svg" >
+    </div>
+				<div class="page-title">
+					<h1 class="name">Itamar Serafim Silva</h1>
+					<p class="last-updated">Last updated: jul/01/2020 &nbsp; 
+						<span class="header-flags" [ngClass]="{active: lang === 'pt'}" (click)="lang = 'pt'" ><img src="./assets/images/flag-br.svg"></span>
+						<span class="header-flags active" [ngClass]="{active: lang === 'en'}" (click)="lang = 'en'" ><img src="./assets/images/flag-us.svg" ></span>
+						<span class="header-flags" [ngClass]="{active: lang === 'fr'}" (click)="lang = 'fr'" ><img src="./assets/images/flag-fr.svg" ></span>
+					</p>
+					<button
+            (click)="print()"
+            color="primary"
+            class="mat-elevation-z0 print-button"
+            aria-label="Print"
+            mat-mini-fab
+            >
+            <mat-icon>print</mat-icon>
+          </button>
+				</div>
+
+
+		</header>
+
+		<section class="c-section" #personalData>
+			<h1 class="section-title">Pesonal Data
+        <!-- <mat-slide-toggle (click)="log(personalData)"> Will be printed</mat-slide-toggle> -->
+      </h1>
+			<table>
+				<tr>
+					<td class="p-data-item-tile">Birth date:</td>
+					<td class="p-data-item">07/13/1981</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Marital Status:</td>
+					<td class="p-data-item">Single</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Country: </td>
+					<td class="p-data-item">Brazil</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">State:</td>
+					<td class="p-data-item">São Paulo</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">City:</td>
+					<td class="p-data-item">São Paulo</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Neighbohood:</td>
+					<td class="p-data-item">JD Laura</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">ZIP Code:</td>
+					<td class="p-data-item">{{zip}}</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Adressline:</td>
+					<td class="p-data-item">{{address}}</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Cellphone:</td>
+					<td class="p-data-item">{{cellphone}}</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">E-mail:</td>
+					<td class="p-data-item">{{email}}</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">LinkedIn:</td>
+					<td class="p-data-item"> 
+            <a target="_blank" href="https://www.linkedin.com/in/itamar-serafim-silva">https://www.linkedin.com/in/itamar-serafim-silva</a>
+          </td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Stackblitz:</td>
+					<td class="p-data-item"> 
+            <a target="_blank" href="https://angular-bootstrap4-playground.stackblitz.io">https://angular-bootstrap4-playground.stackblitz.io</a>
+            <br/>
+            <a target="_blank" href="https://d3-charts-playground.stackblitz.io">https://d3-charts-playground.stackblitz.io</a> 
+            
+          </td>
+				</tr>
+			</table>
+		</section>
+
+		<section class="c-section">
+			<h1 class="section-title">Summary</h1>
+			<ul class="summary-list">
+				<li>
+					&#187; Graduated in Computer Science from UNIP – Universidade Paulistana (jan/2012 - dez/2015)
+				</li>
+				<li>
+					&#187; Experience of 6+ years in developing sites and intranets.
+				</li>
+				<li>
+					&#187; Experience in technologies for frontend development with Javascript, REST, JQuery, AngularJs,
+					Angular 5, Bootstrap, CSS3, HTML5.
+				</li>
+				<li>
+					&#187; Knowledge in Java, C#, MySQL, NodeJs, IBM Loopback(javascript API framework based on
+					Express).
+				</li>
+				<li>
+					&#187; Experience in Microsoft Sharepoint plateform since 2013.
+				</li>
+				<li>
+					&#187; Experience in: wiki sites, team sites, publishing and search sites, custom Sharepoint
+					solutions
+					in Visual Studio and SPDesigner, solution packaging, webparts, Dashboards, lists, list
+					schemas, list definitions, list instances, workflows, SP features .
+				</li>
+				<li>
+					&#187; A burning passion for technology and innovation.
+				</li>
+			</ul>
+		</section>
+
+		<section class="c-section">
+			<h1 class="section-title">Desired Position</h1>
+
+			<table class="desired-positions">
+				<tr>
+					<td class=" bold">Primary:</td>
+					<td>
+						Front-end developer
+					</td>
+				</tr>
+				<tr>
+					<td class="bold">Secondary:</td>
+					<td>
+						Web developer
+					</td>
+				</tr>
+			</table>
+		</section>
+
+		<section class="c-section">
+			<h1 class="section-title">Professional Experiences</h1>
+			<table class="experiences">
+				<tr>
+					<td class="date-range">02/2020 - 07/2020</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4E0BAQG8dVHdZkr_0g/company-logo_100_100/0?e=1601510400&v=beta&t=l34hdokegoLB40vf1oOY3S6ygbvhyTtY6LzaKgHwl4U">
+              GFT Group</p>
+						<p>Development of a SAAS for a financial institution</p>
+						<span class="assignments">Assignments:</span><br/>
+						<ul class="summary-list">
+							<li>
+								&#187; Code new features.
+							</li>
+							<li>
+								&#187; Break user estories into smaller tasks.
+							</li>
+							<li>
+								&#187; Do code review.
+							</li>
+							<li>
+								&#187; Participate in SCRUM cerimonies(planning, daily, reviews, retrospectives).
+							</li>
+							<li>
+								&#187; Colaborate with UX team suggesting improvements.
+							</li>
+						</ul>
+						<p><span class="experience-title">Main tools and technologies: </span> Angular 8, Typescrypt,
+							SCSS,
+							Git, Jira, confluence, InVision, Zeplin</p>
+              <a href="javascript:void(0);" class="btn-more">More...</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">05/2019 - 02/2020</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4E0BAQFYfXmc89slmg/company-logo_100_100/0?e=1601510400&v=beta&t=e2ijgAp71kLSDtxFtLsWJIE0JEW-fjsLYGlVoBSXHlY">
+              Ignilife</p>
+						<span class="assignments">Assignments:</span>
+						<ul class="summary-list">
+							<li>
+								&#187; Maintenance in a SAAS Platform(web and mobile) for preventive health.
+							</li>
+							<li>
+								&#187; Improve user experience.
+							</li>
+							<li>
+								&#187; Build new features.
+							</li>
+						</ul>
+						<p><span class="experience-title">Main tools and technologies: </span> Ionic cordova(for mobile
+							app), AngularJs git, Jira, VS Code, Angular 5, Angular CLI, Typescrypt, SASS, npm</p>
+              <a href="javascript:void(0);" class="btn-more">More...</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">03/2019 - 05/2019</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4D0BAQHX2zsMj7NLNQ/company-logo_100_100/0?e=1601510400&v=beta&t=Y6S2JZO-SiegUyF2Rk3VicVQehBmDsT-0tFw1zwMYJs">
+              Indra</p>
+						<p>Development of modules for ATM machine.</p>
+						<p><span class="assignments">Assignments:</span> <br/>
+            Code new features, participate in scrum cerimonies, etc.
+          </p>
+							<p><span class="experience-title">Main tools and technologies: </span> Git, Jira, VS Code,
+								Angular 5, Angular CLI, Typescrypt, SASS, npm</p>
+              <a href="javascript:void(0);" class="btn-more">More...</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">06/2018 - 03/2019</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4D0BAQErEWFu9IWJQw/company-logo_100_100/0?e=1601510400&v=beta&t=fhbB4Q61B3kj_0KrI_NKVvclGGZlmSAH8-O7eZnRT7k">
+              Iteris</p>
+						<p>Platform for integrating companies, schools and students.</p>
+						<p class="assignments">Assignments:
+						</p>
+
+						<ul class="summary-list">
+							<li>
+								&#187; Development of new site components and maintenance of the existing ones for
+								business process automation in a huge project in the area of education.
+							</li>
+						</ul>
+
+						<p>
+							<span class="experience-title">Main tools and technologies: </span>
+							Bitbucket, Jira, VS Code, Angular 5, Angular CLI, Typescrypt, SASS, Git Bash, SourceTree,
+							Postman, Slack, npm.
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">06/2017 - 07/2017</td>
+					<td>
+						<p class="experience-title company-name">              
+              <img class="company-logo" src="https://s3.us-east-2.amazonaws.com/startse-comunidade/uploads/croppedImg_1516332442.jpeg">
+              IsQuik Brasil</p>
+						<p class="assignments">Assignments:
+						</p>
+
+						<ul class="summary-list">
+							<li>
+								&#187; Develop application features based on IsQuik Framework.
+							</li>
+							<li>
+								&#187; Maintain legacy code.
+							</li>
+							<li>
+								&#187; Solve performance issues in site components.
+							</li>
+						</ul>
+
+						<p>
+							<span class="experience-title">Main tools and technologies: </span>
+							Javascript, CSS3, AngularJs and Angular Material.
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2014 - 08/2016</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4E0BAQGIo0POXe81dw/company-logo_100_100/0?e=1601510400&v=beta&t=1ywVbYRyUQD4WkVxyQJPO9BoJAwQXupV3GKWjK_8BF4">
+              Class Systems Solutions(for the second time)</p>
+						<p><span class="experience-title">Position: </span> Frontend and Sharepoint Developer</p>
+						<p class="assignments">Assignments:
+						</p>
+
+						<ul class="summary-list">
+							<li>
+								&#187; Development of sites and intranets in Sharepoint plateform.
+							</li>
+							<li>
+								&#187; Development and maintenance of web components.
+							</li>
+							<li>
+								&#187; Legacy code maintenance.
+							</li>
+							<li>
+								&#187; Customization of native components in the plataforma such as: lists, libraries,
+								surveys, webparts.
+							</li>
+							<li>
+								&#187; Creation of custom solutions and packaged solutions in Visual Studio, etc.
+							</li>
+							<li>
+								&#187; Development of dashboards in JQuery, mainly with DevExpress UI components.
+							</li>
+							<li>
+								&#187; Writing of manuals for the developed softwares.
+							</li>
+							<li>
+								&#187; Development of ContentTypes, page layouts and master pages.
+							</li>
+							<li>
+								&#187; Design of workflows in Sharepoint Designer.
+							</li>
+							<li>
+								&#187; Customization of site search.
+							</li>
+
+
+						</ul>
+
+						<p>
+							<span class="experience-title">Main tools and technologies: </span>
+							Sharepoint CSR, REST, SPServices, Javascript, AngularJs, JQuery, CSS3, Bootstrap, DevExpress
+							framework, TFS, GIT, C#, Sharepoint Designer 2010/2013, Visual Studio, VS Code,Ms Infopath
+							Designer, gulp, Microsoft Office, Adobe Ilustrator, Paint.net.
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">01/2013 – 04/2014</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4E0BAQGIo0POXe81dw/company-logo_100_100/0?e=1601510400&v=beta&t=1ywVbYRyUQD4WkVxyQJPO9BoJAwQXupV3GKWjK_8BF4">
+              Class Systems Solutions(first time)</p>
+						<p><span class="experience-title">Position: </span> Jr Front end and Sharepoint Developer</p>
+						<span class="assignments">Assignments:</span><br/>
+
+						<ul class="summary-list">
+							<li>
+								&#187; Development and maintenance of web components.
+							</li>
+							<li>
+								&#187; Site and intranet administration in Sharepoint plateform.
+							</li>
+							<li>
+								&#187; Advanced Infopath form development.
+							</li>
+							<li>
+								&#187; Lists, surveys, and webparts development.
+							</li>
+							<li>
+								&#187; Software development effort estimation.
+							</li>
+						</ul>
+						<p><span class="experience-title">Main tools and technologies: </span> REST, SPServices, JQuery,
+							CSS3, Bootstrap, TFS, Sharepoint Designer 2010/2013, Visual Studio, Ms Infopath Designer,
+							Microsoft Office, Adobe Ilustrator, Paint.net.</p>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+
+		<section class="c-section">
+			<h1 class="section-title">Education</h1>
+			<table class="experiences">
+				<tr>
+					<td class="date-range">02/2012 – 12/2015</td>
+					<td>
+						<p class="experience-title">Bachelor degree in Computer Science</p>
+						<p>
+							UNIP – Universidade Paulistana <br/>
+            Type: Higher Education<br/>
+            City: São Paulo<br/>
+          </p>
+
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">01/2009 - 01/2012</td>
+					<td>
+						<p class="experience-title">High School</p>
+						<p>
+							ENEM <br/>
+            Type: High School<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2009 - 12/2009</td>
+					<td>
+						<p class="experience-title">Java Developer</p>
+						<p>
+							SENAI Suíço-Brasileiro <br/>
+            Type: Certificate<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2006 - 02/2007</td>
+					<td>
+						<p class="experience-title">Web Designer</p>
+						<p>
+							SENAI Suíço-Brasileiro <br/>
+            Type: Certificate<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2006 - 02/2007</td>
+					<td>
+						<p class="experience-title">Microsoft Access</p>
+						<p>
+							Work Data - Escola de Informática<br/>
+            Type: Extracurricular Courses: 06 months 4hrs per week<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2006 - 02/2007</td>
+					<td>
+						<p class="experience-title">Visual Basic</p>
+						<p>
+							Work Data - Escola de Informática<br/>
+            Type: Extracurricular Courses: 06 months 4hrs per week<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">05/2004 - 02/2005</td>
+					<td>
+						<p class="experience-title">Microsft Word e Microsoft Excel</p>
+						<p>
+							PEF – (Family School Program)<br/>
+            Type: Extracurricular Courses: 06 months 4hrs per week<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+			</table>
+		</section>
+
+
+		<section class="c-section">
+			<h1 class="section-title">Informatics</h1>
+			<table >
+				<tr>
+					<td class="bold">Programming</td>
+					<td>Javascript, Jquery, AngularJs, Angular 5, Typescrypt, npm, SASS, CSS3, HTML5, Bootstrap, Java, C#, NodeJs, , DevExpress, IBM Loopback (nodejs API framework based on Express).</td>
+				</tr>
+
+				<tr>
+					<td class="bold">IDE’s</td>
+					<td>VS Code, Visual Studio, Eclipse, Sharepoint Designer, Sublime 3, Notepad++, Netbeans.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Javascript libraries</td>
+					<td>Angular Material, Jquery, D3.js, Highcharts, NgxCharts, Flotr, Sparkline, DevExpress,
+						NivoSlider,
+						BxSlider, JQueryPrint, JQuery UI, ValidateJs, CLNDR.js, moment.js.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Graphic tools</td>
+					<td>Inkscape, Paint.net, Gimp, Adobe Ilustartor.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Office applications</td>
+					<td>Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Access.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Operating systems</td>
+					<td>Windows, Linux and Mac OS.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Others</td>
+					<td>Jira, Bitbucket, npm, Git, TFS, Gulp, Postman, Outlook, Evernote, Infopath Designer.</td>
+				</tr>
+			</table>
+		</section>
+
+
+		<section class="c-section">
+			<h1 class="section-title">Knowledge of</h1>
+			<p>Microsoft SharePoint 2010/2013, Sharepoint Online, Sharepoint CSR, AngularJS, JQuery, JQuery
+				UI, REST, Bootstrap, InfoPath, TFS, Git, CSS3, C#, SharePoint Designer, Microsoft Office,
+				JavaScript, Microsoft Excel, Project Management, Sharepoint site administration, Task automation
+				with Gulp, npm, IBM Loopback(javascript API framework based on Express).</p>
+		</section>
+
+		<section class="c-section">
+			<h1 class="section-title">Idiomes</h1>
+			<ul class="summary-list">
+				<li>
+					&#187; English, fluent
+				</li>
+				<li>
+					&#187; Spanish, basic
+				</li>
+				<li>
+					&#187; French, basic
+				</li>
+				<li>
+					&#187; Portuguese, native
+				</li>
+			</ul>
+		</section>
+
+	</div>
+
+</div>
+
+<div *ngIf="lang === 'pt'" #wrap>
+
+	<div class="container">
+		<header class="row page-header">
+			<div class="logo">
+				<img width="270" src="./assets/images/icon-curriculum-header.svg" >
+    </div>
+				<div class="page-title">
+					<h1 class="name">Itamar Serafim Silva</h1>
+					<p class="last-updated">Última atualização: 01/jul/2020 &nbsp; 
+						<span class="header-flags" [ngClass]="{active: lang === 'pt'}" (click)="lang = 'pt'" ><img src="./assets/images/flag-br.svg"></span>
+						<span class="header-flags active" [ngClass]="{active: lang === 'en'}" (click)="lang = 'en'" ><img src="./assets/images/flag-us.svg" ></span>
+						<span class="header-flags" [ngClass]="{active: lang === 'fr'}" (click)="lang = 'fr'" ><img src="./assets/images/flag-fr.svg" ></span>
+					</p>
+					<button
+            (click)="print()"
+            color="primary"
+            class="mat-elevation-z0 print-button"
+            aria-label="Print"
+            mat-mini-fab
+            >
+            <mat-icon>print</mat-icon>
+          </button>
+				</div>
+
+
+		</header>
+
+		<section class="c-section" #personalData>
+			<h1 class="section-title">Dados Pessoais
+        <!-- <mat-slide-toggle (click)="log(personalData)"> Will be printed</mat-slide-toggle> -->
+      </h1>
+			<table>
+				<tr>
+					<td class="p-data-item-tile">Data de nascimento:</td>
+					<td class="p-data-item">13/07/1981</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Estado civil:</td>
+					<td class="p-data-item">Solteiro</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">País: </td>
+					<td class="p-data-item">Brasil</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Estado:</td>
+					<td class="p-data-item">São Paulo</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Cidade:</td>
+					<td class="p-data-item">São Paulo</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Bairro:</td>
+					<td class="p-data-item">JD Laura</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">CEP:</td>
+					<td class="p-data-item">{{zip}}</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Endereço:</td>
+					<td class="p-data-item">{{address}}</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Celular:</td>
+					<td class="p-data-item">{{cellphone}}</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">E-mail:</td>
+					<td class="p-data-item">{{email}}</td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">LinkedIn:</td>
+					<td class="p-data-item"> 
+            <a target="_blank" href="https://www.linkedin.com/in/itamar-serafim-silva">https://www.linkedin.com/in/itamar-serafim-silva</a>
+          </td>
+				</tr>
+				<tr>
+					<td class="p-data-item-tile">Stackblitz:</td>
+					<td class="p-data-item"> 
+            <a target="_blank" href="https://angular-bootstrap4-playground.stackblitz.io">https://angular-bootstrap4-playground.stackblitz.io</a>
+            <br/>
+            <a target="_blank" href="https://d3-charts-playground.stackblitz.io">https://d3-charts-playground.stackblitz.io</a>
+          </td>
+				</tr>
+			</table>
+		</section>
+
+		<section class="c-section">
+			<h1 class="section-title">Resumo</h1>
+			<ul class="summary-list">
+				<li>
+					&#187; Graduado em Ciência da Computação pela UNIP – Universidade Paulistana (jan/2012 - dec/2015)
+				</li>
+				<li>
+					&#187; Experiência desenvolvimento sites e intranets desde 2013.
+				</li>
+				<li>
+					&#187; Experiência em tecnologias para desenvolvimento frontend como javascript, Angular 2+, REST, JQuery, AngularJs, Bootstrap, CSS,HTML.
+				</li>
+				<li>
+					&#187; Conhecimento em Java, C#, MySQL, NodeJs, IBM Loopback(javascript API framework based on
+					Express).
+				</li>
+				<li>
+					&#187; Experiência em Microsoft Sharepoint plateform desde 2013.
+				</li>
+				<li>
+					&#187; Experience em: wiki sites, team sites, publishing and search sites, custom Sharepoint
+					solutions
+					in Visual Studio and SPDesigner, solution packaging, webparts, Dashboards, lists, list
+					schemas, list definitions, list instances, workflows, SP features .
+				</li>
+				<li>
+					&#187; E uma paixão ardente por tecnologia e inovação.
+				</li>
+			</ul>
+		</section>
+
+		<section class="c-section">
+			<h1 class="section-title">Objetivo</h1>
+			<table class="desired-positions">
+				<tr>
+					<td class=" bold">Primário:</td>
+					<td>
+						Front-end(Angular) developer
+					</td>
+				</tr>
+				<tr>
+					<td class="bold">Secundário:</td>
+					<td>
+						Web developer
+					</td>
+				</tr>
+			</table>
+		</section>
+
+		<section class="c-section">
+			<h1 class="section-title">Experiências profissionais</h1>
+			<table class="experiences">
+				<tr>
+					<td class="date-range">02/2020 - 07/2020</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4E0BAQG8dVHdZkr_0g/company-logo_100_100/0?e=1601510400&v=beta&t=l34hdokegoLB40vf1oOY3S6ygbvhyTtY6LzaKgHwl4U">
+              GFT Group</p>
+						<p>Desenvolvimento de um SAAS em uma instituição financeira.</p>
+						<span class="assignments">Attribuições:</span><br/>
+						<ul class="summary-list">
+							<li>
+								&#187; Codificar novas features.
+							</li>
+							<li>
+								&#187; Quebrar estórias em tasks.
+							</li>
+							<li>
+								&#187; Fazer code review.
+							</li>
+							<li>
+								&#187; Participar das cerimônias scrum(planning, daily, reviews, retrospectives).
+							</li>
+							<li>
+								&#187; Colaborar com times de back e UX, sugerindo melharamentos.
+							</li>
+						</ul>
+						<p><span class="experience-title">Principais ferramentas e tecnologias: </span> Angular 8, Typescrypt,
+							SCSS,
+							Git, Jira, confluence, InVision, Zeplin</p>
+              <a href="javascript:void(0);" class="btn-more">More...</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">05/2019 - 02/2020</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4E0BAQFYfXmc89slmg/company-logo_100_100/0?e=1601510400&v=beta&t=e2ijgAp71kLSDtxFtLsWJIE0JEW-fjsLYGlVoBSXHlY">
+              Ignilife</p>
+              <p></p>
+						<span class="assignments">Attribuições:</span>
+						<ul class="summary-list">
+							<li>
+								&#187; Manutenção em plataforma(web and mobile) SAAS de saúde preventiva.
+							</li>
+							<li>
+								&#187; Desenvolver melhorias na experiência do usuário.
+							</li>
+							<li>
+								&#187; Construir novas features.
+							</li>
+						</ul>
+						<p><span class="experience-title">Principais ferramentas e tecnologias: </span> Ionic cordova(for mobile
+							app), AngularJs git, Jira, VS Code, Angular 5, Angular CLI, Typescrypt, SASS, npm</p>
+              <a href="javascript:void(0);" class="btn-more">More...</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">03/2019 - 05/2019</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4D0BAQHX2zsMj7NLNQ/company-logo_100_100/0?e=1601510400&v=beta&t=Y6S2JZO-SiegUyF2Rk3VicVQehBmDsT-0tFw1zwMYJs">
+              Indra</p>
+						<p>Desenvolvimento de módulos para caixa eletônico.</p>
+						<p><span class="assignments">Attribuições:</span> <br/>
+            Codificar novas features, participar em cerimônias scrum, etc.
+          </p>
+							<p><span class="experience-title">Principais ferramentas e tecnologias: </span> Git, Jira, VS Code,
+								Angular 5, Angular CLI, Typescrypt, SASS, npm</p>
+              <a href="javascript:void(0);" class="btn-more">More...</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">06/2018 - 03/2019</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4D0BAQErEWFu9IWJQw/company-logo_100_100/0?e=1601510400&v=beta&t=fhbB4Q61B3kj_0KrI_NKVvclGGZlmSAH8-O7eZnRT7k">
+              Iteris</p>
+						<p>Cliente da áerea da educação: Plataforma para integrar empresas, escolas e alunos.</p>
+						<p class="assignments">Attribuições:
+						</p>
+
+						<ul class="summary-list">
+							<li>
+								&#187; Desenvolvimento novos módulos e de componentes de sites.
+							</li>
+							<li>
+								&#187; Colaborar com as equipes de produto, UX e backend.
+							</li>
+						</ul>
+
+						<p>
+							<span class="experience-title">Principais ferramentas e tecnologias: </span>
+							Bitbucket, Jira, VS Code, Angular 5, Angular CLI, Typescrypt, SASS, Git Bash, SourceTree,
+							Postman, Slack, npm.
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">06/2017 - 07/2017</td>
+					<td>
+						<p class="experience-title company-name">              
+              <img class="company-logo" src="https://s3.us-east-2.amazonaws.com/startse-comunidade/uploads/croppedImg_1516332442.jpeg">
+              IsQuik Brasil</p>
+						<p class="assignments">Attribuições:
+						</p>
+
+						<ul class="summary-list">
+							<li>
+								&#187; Desenvolvimento de aplicações baseadas no IsQuik Framework.
+							</li>
+							<li>
+								&#187; Manutenção de código legago.
+							</li>
+							<li>
+								&#187; Resolver problemas de performance no site.
+							</li>
+						</ul>
+
+						<p>
+							<span class="experience-title">Principais ferramentas e tecnologias: </span>
+							Javascript, CSS3, AngularJs and Angular Material.
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2014 - 08/2016</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4E0BAQGIo0POXe81dw/company-logo_100_100/0?e=1601510400&v=beta&t=1ywVbYRyUQD4WkVxyQJPO9BoJAwQXupV3GKWjK_8BF4">
+              Class Systems Solutions(for the second time)</p>
+						<p><span class="experience-title">Position: </span> Frontend and Sharepoint Developer</p>
+						<p class="assignments">Attribuições:
+						</p>
+
+						<ul class="summary-list">
+							<li>
+								&#187; Development of sites and intranets in Sharepoint plateform.
+							</li>
+							<li>
+								&#187; Development and maintenance of web components.
+							</li>
+							<li>
+								&#187; Legacy code maintenance.
+							</li>
+							<li>
+								&#187; Customization of native components in the plataforma such as: lists, libraries,
+								surveys, webparts.
+							</li>
+							<li>
+								&#187; Creation of custom solutions and packaged solutions in Visual Studio, etc.
+							</li>
+							<li>
+								&#187; Development of dashboards in JQuery, mainly with DevExpress UI components.
+							</li>
+							<li>
+								&#187; Writing of manuals for the developed softwares.
+							</li>
+							<li>
+								&#187; Development of ContentTypes, page layouts and master pages.
+							</li>
+							<li>
+								&#187; Design of workflows in Sharepoint Designer.
+							</li>
+							<li>
+								&#187; Customization of site search.
+							</li>
+
+
+						</ul>
+
+						<p>
+							<span class="experience-title">Principais ferramentas e tecnologias: </span>
+							Sharepoint CSR, REST, SPServices, Javascript, AngularJs, JQuery, CSS3, Bootstrap, DevExpress
+							framework, TFS, GIT, C#, Sharepoint Designer 2010/2013, Visual Studio, VS Code,Ms Infopath
+							Designer, gulp, Microsoft Office, Adobe Ilustrator, Paint.net.
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">01/2013 – 04/2014</td>
+					<td>
+						<p class="experience-title company-name">
+              <img class="company-logo" src="https://media-exp1.licdn.com/dms/image/C4E0BAQGIo0POXe81dw/company-logo_100_100/0?e=1601510400&v=beta&t=1ywVbYRyUQD4WkVxyQJPO9BoJAwQXupV3GKWjK_8BF4">
+              Class Systems Solutions(first time)</p>
+						<p><span class="experience-title">Position: </span> Jr Front end and Sharepoint Developer</p>
+						<span class="assignments">Attribuições:</span><br/>
+
+						<ul class="summary-list">
+							<li>
+								&#187; Development and maintenance of web components.
+							</li>
+							<li>
+								&#187; Site and intranet administration in Sharepoint plateform.
+							</li>
+							<li>
+								&#187; Advanced Infopath form development.
+							</li>
+							<li>
+								&#187; Lists, surveys, and webparts development.
+							</li>
+							<li>
+								&#187; Software development effort estimation.
+							</li>
+						</ul>
+						<p><span class="experience-title">Principais ferramentas e tecnologias: </span> REST, SPServices, JQuery,
+							CSS3, Bootstrap, TFS, Sharepoint Designer 2010/2013, Visual Studio, Ms Infopath Designer,
+							Microsoft Office, Adobe Ilustrator, Paint.net.</p>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+
+		<section class="c-section">
+			<h1 class="section-title">Education</h1>
+			<table class="experiences">
+				<tr>
+					<td class="date-range">02/2012 – 12/2015</td>
+					<td>
+						<p class="experience-title">Bachelor degree in Computer Science</p>
+						<p>
+							UNIP – Universidade Paulistana <br/>
+            Type: Higher Education<br/>
+            City: São Paulo<br/>
+          </p>
+
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">01/2009 - 01/2012</td>
+					<td>
+						<p class="experience-title">High School</p>
+						<p>
+							ENEM <br/>
+            Type: High School<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2009 - 12/2009</td>
+					<td>
+						<p class="experience-title">Java Developer</p>
+						<p>
+							SENAI Suíço-Brasileiro <br/>
+            Type: Certificate<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2006 - 02/2007</td>
+					<td>
+						<p class="experience-title">Web Designer</p>
+						<p>
+							SENAI Suíço-Brasileiro <br/>
+            Type: Certificate<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2006 - 02/2007</td>
+					<td>
+						<p class="experience-title">Microsoft Access</p>
+						<p>
+							Work Data - Escola de Informática<br/>
+            Type: Extracurricular Courses: 06 months 4hrs per week<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">08/2006 - 02/2007</td>
+					<td>
+						<p class="experience-title">Visual Basic</p>
+						<p>
+							Work Data - Escola de Informática<br/>
+            Type: Extracurricular Courses: 06 months 4hrs per week<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="date-range">05/2004 - 02/2005</td>
+					<td>
+						<p class="experience-title">Microsft Word e Microsoft Excel</p>
+						<p>
+							PEF – (Family School Program)<br/>
+            Type: Extracurricular Courses: 06 months 4hrs per week<br/>
+            City: São Paulo<br/>
+          </p>
+					</td>
+				</tr>
+
+			</table>
+		</section>
+
+
+		<section class="c-section">
+			<h1 class="section-title">Informatics</h1>
+			<table >
+				<tr>
+					<td class="bold">Programming</td>
+					<td>Javascript, Jquery, AngularJs, Angular 5, Typescrypt, npm, SASS, CSS3, HTML5, Bootstrap, Java, C#, NodeJs, , DevExpress, IBM Loopback (nodejs API framework based on Express).</td>
+				</tr>
+
+				<tr>
+					<td class="bold">IDE’s</td>
+					<td>VS Code, Visual Studio, Eclipse, Sharepoint Designer, Sublime 3, Notepad++, Netbeans.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Javascript libraries</td>
+					<td>Angular Material, Jquery, D3.js, Highcharts, NgxCharts, Flotr, Sparkline, DevExpress,
+						NivoSlider,
+						BxSlider, JQueryPrint, JQuery UI, ValidateJs, CLNDR.js, moment.js.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Graphic tools</td>
+					<td>Inkscape, Paint.net, Gimp, Adobe Ilustartor.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Office applications</td>
+					<td>Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Access.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Operating systems</td>
+					<td>Windows, Linux and Mac OS.</td>
+				</tr>
+
+				<tr>
+					<td class="bold">Others</td>
+					<td>Jira, Bitbucket, npm, Git, TFS, Gulp, Postman, Outlook, Evernote, Infopath Designer.</td>
+				</tr>
+			</table>
+		</section>
+
+
+		<section class="c-section">
+			<h1 class="section-title">Knowledge of</h1>
+			<p>Microsoft SharePoint 2010/2013, Sharepoint Online, Sharepoint CSR, AngularJS, JQuery, JQuery
+				UI, REST, Bootstrap, InfoPath, TFS, Git, CSS3, C#, SharePoint Designer, Microsoft Office,
+				JavaScript, Microsoft Excel, Project Management, Sharepoint site administration, Task automation
+				with Gulp, npm, IBM Loopback(javascript API framework based on Express).</p>
+		</section>
+
+		<section class="c-section">
+			<h1 class="section-title">Idiomes</h1>
+			<ul class="summary-list">
+				<li>
+					&#187; English, fluent
+				</li>
+				<li>
+					&#187; Spanish, basic
+				</li>
+				<li>
+					&#187; French, basic
+				</li>
+				<li>
+					&#187; Portuguese, native
+				</li>
+			</ul>
+		</section>
+
+	</div>
+
+</div>
+
+<div *ngIf="lang === 'fr'" #wrap>
+
+	<div class="container">
+		<header class="row page-header">
+			<div class="logo">
+				<img width="270" src="./assets/images/icon-curriculum-header.svg" >
+    </div>
+				<div class="page-title">
+					<h1 class="name">Itamar Serafim Silva</h1>
+					<p class="last-updated">Dernière mise à jour : 01/jul/2020  &nbsp; 
+						<span class="header-flags" [ngClass]="{active: lang === 'pt'}" (click)="lang = 'pt'" ><img src="./assets/images/flag-br.svg"></span>
+						<span class="header-flags active" [ngClass]="{active: lang === 'en'}" (click)="lang = 'en'" ><img src="./assets/images/flag-us.svg" ></span>
+						<span class="header-flags" [ngClass]="{active: lang === 'fr'}" (click)="lang = 'fr'" ><img src="./assets/images/flag-fr.svg" ></span>
+					</p>
+					<button
+            (click)="print()"
+            color="primary"
+            class="mat-elevation-z0 print-button"
+            aria-label="Print"
+            mat-mini-fab
+            >
+            <mat-icon>print</mat-icon>
+          </button>
+				</div>
+
+
+		</header>
+
+    <h1 style="color: red; text-align: center">À venir</h1>
+
+	</div>
+</div>

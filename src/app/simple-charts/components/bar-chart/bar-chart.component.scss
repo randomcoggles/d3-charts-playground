@@ -1,0 +1,11 @@
+.pb-0 {
+  padding-bottom: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+:host ::ng-deep {
+  .grid-line {
+    stroke: rgba(0, 255, 255, 0.45098039215686275);
+}
+}
