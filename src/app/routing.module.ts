@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
+// import { FormDesignModule } from ;
 
 const routes: Routes = [  
 	{ path: 'curriculum', component: CurriculumComponent },
@@ -32,6 +33,16 @@ const routes: Routes = [
     path: 'sprint-timeline', 
     loadChildren:
     () => import('./sprint-timeline/sprint-timeline.module').then(m => m.SprintTimelineModule)
-  }
+  },
+  {
+    path: 'onboarding',
+    loadChildren: 
+    () => import('./onboarding/onboarding.module').then(m => m.OnboardingModule)
+  },
+  // {
+  //   path: 'form-design',
+  //   loadChildren: 
+  //   () => import('./form-design/form-design.module').then(m => m.FormDesignModule)
+  // }
 ]
 export const AppRoutingModule = RouterModule.forRoot(routes);

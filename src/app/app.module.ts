@@ -15,24 +15,6 @@ import { BasicChartModule } from './shared/basic-chart/basic-chart.module';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 
 
-const routes: Routes = [  
-	{ path: 'home', component: HomeComponent },
-	{ path: '', redirectTo: 'home', pathMatch: 'full' },
-  { 
-    path: 'simple-charts', 
-    loadChildren: 
-    // './simple-charts/simple-charts.module#SimpleChartsModule'
-    () => import('./simple-charts/simple-charts.module').then(m => m.SimpleChartsModule)
-  },
-  { 
-    path: 'interactive-charts', 
-    loadChildren: 
-    // './simple-charts/simple-charts.module#SimpleChartsModule'
-    () => import('./simple-charts/simple-charts.module').then(m => m.SimpleChartsModule)
-  }
-]
-// const AppRoutingModule = RouterModule.forRoot(routes);
-
 @NgModule({
   imports:      [
     CommonModule,
