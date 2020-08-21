@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
+import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 // import { FormDesignModule } from ;
 
 const routes: Routes = [  
@@ -38,6 +39,10 @@ const routes: Routes = [
     path: 'onboarding',
     loadChildren: 
     () => import('./onboarding/onboarding.module').then(m => m.OnboardingModule)
+  },
+  {
+    path: 'under-construction',
+    component: UnderConstructionComponent
   },
   // {
   //   path: 'form-design',
