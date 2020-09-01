@@ -68,7 +68,7 @@ export class BrushSelectionComponent
   ngAfterViewInit() {
     // TODO: relocate this to an input
     this.chartReady = false;
-    this.http.get("./assets/bubble-data02.json")    
+    this.http.get("./assets/bubble-data02.json", {headers: {'cacheable': 'true'}})    
     .pipe(delay(1000))
     .pipe(finalize(() => { 
       this.dataReady = true;

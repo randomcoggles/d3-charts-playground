@@ -11,7 +11,7 @@ export class SprintTimelineComponent {
 
   constructor(private http: HttpClient) {
     
-    this.http.get("./assets/mock-sprints.json").subscribe(
+    this.http.get("./assets/mock-sprints.json", {headers: {'cacheable': 'true'}}).subscribe(
       response => {
         this.sprints = (response as any[] || []).reverse();
         this.sprints.forEach(sprint => {

@@ -7,12 +7,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { MaterialComponentsModule } from './shared/material-components/material-components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { ThreeDCarrousselModule } from './components/three-d-carroussel/three-d-carroussel.module';
 import { AppRoutingModule } from './routing.module';
 import { BasicChartModule } from './shared/basic-chart/basic-chart.module';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
+import { CacheService } from './core/cache.service';
+import { CacheInteceptor } from './core/cache.interceptor';
 
 
 @NgModule({
@@ -31,6 +33,10 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
     
     ],
   declarations: [ AppComponent, HomeComponent, CurriculumComponent ],
+  providers: [
+    CacheService,
+    { provide: HTTP_INTERCEPTORS, useClass: CacheInteceptor, multi: true }
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
