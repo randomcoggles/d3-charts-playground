@@ -1,0 +1,24 @@
+<h3>Connect dots</h3> - {{dots.length}}
+
+					<button
+            (click)="renderGraph()"
+            color="primary"
+            class="mat-elevation-z0 print-button"
+            aria-label="Print"
+            mat-button
+            >
+            <mat-icon>scatter_plot</mat-icon> Build connections
+          </button>
+<div >
+  <svg style="border: dashed 2px; display:block; width:600px; height:550px" id="svg-canvas">
+    <g *ngIf="dots.length">
+      <circle *ngFor="let circle of dots"
+        [attr.cx]="circle.x"
+        [attr.cy]="circle.y"
+        r="3"
+        fill="blue">
+      </circle>
+    </g>
+      <path *ngFor="let connection of vertices  | keyvalue" [attr.d]="connection.value['dStr']" [attr.stroke]="connection.value['color']" stroke-width="1" fill="none"/>
+  </svg>
+<div>

@@ -15,6 +15,7 @@ import { BasicChartModule } from './shared/basic-chart/basic-chart.module';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 import { CacheService } from './core/cache.service';
 import { CacheInteceptor } from './core/cache.interceptor';
+import { ConnectDotsComponent } from './components/connect-dots/connect-dots.component';
 
 
 @NgModule({
@@ -32,7 +33,12 @@ import { CacheInteceptor } from './core/cache.interceptor';
     BasicChartModule
     
     ],
-  declarations: [ AppComponent, HomeComponent, CurriculumComponent ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    CurriculumComponent,
+    ConnectDotsComponent
+    ],
   providers: [
     CacheService,
     { provide: HTTP_INTERCEPTORS, useClass: CacheInteceptor, multi: true }
