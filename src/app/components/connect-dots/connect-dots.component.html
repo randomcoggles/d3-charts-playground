@@ -1,6 +1,8 @@
-<h3>Connect dots</h3> - {{dots.length}}
-
-					<button
+<h3>Connect dots</h3>
+<div >
+    
+      <!-- <md-progress-circular ng-if="showSpinner" style="display:inline" ng-disabled="!showSpinner" class="md-hue-2" md-diameter="20px"></md-progress-circular> -->
+      <button
             (click)="renderGraph()"
             color="primary"
             class="mat-elevation-z0 print-button"
@@ -9,6 +11,11 @@
             >
             <mat-icon>scatter_plot</mat-icon> Build connections
           </button>
+    <label>Number of dots: <input size="2" [(ngModel)]="numberOfDots"></label>
+    <label> Connect to <input size="1" [(ngModel)]="nNearestNeighbors"> neighbors</label>
+					
+  </div>
+
 <div >
   <svg style="border: dashed 2px; display:block; width:600px; height:550px" id="svg-canvas">
     <g *ngIf="dots.length">

@@ -9,7 +9,7 @@ import { ActivatedRoute } from "@angular/router";
 export class ConnectDotsComponent {
   dots = [];
   colors = ['green', 'cyan', 'red', 'blue', 'brown', 'purple', 'gray', 'burlywood', 'coral', 'darkmagenta'];
-  numberOfDots = 2070;
+  numberOfDots = 1070;
   vertices: {};
   showSpinner = false;
   nNearestNeighbors = 3;
