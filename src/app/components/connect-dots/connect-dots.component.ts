@@ -1,3 +1,4 @@
+import { HttpClient } from "@angular/common/http";
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
@@ -6,19 +7,42 @@ import { ActivatedRoute } from "@angular/router";
   templateUrl: "./connect-dots.component.html"
   // styleUrls: ["./connect-dots.component.scss"]
 })
-export class ConnectDotsComponent {
+export class ConnectDotsComponent implements OnInit {
   dots = [];
   colors = ['green', 'cyan', 'red', 'blue', 'brown', 'purple', 'gray', 'burlywood', 'coral', 'darkmagenta'];
   numberOfDots = 1070;
   vertices: {};
   showSpinner = false;
   nNearestNeighbors = 3;
+  verticesPathStr = '';
+  canvasArea = {width: 650, height: 550};
+  foundPathStr = '';
+  connectionsParams: any;
 
-  constructor() {
-    this.dots = this.createRandomDots({width: 600, height: 550}, this.numberOfDots);
-    this.renderGraph();
+  constructor(private http: HttpClient) {
+    // this.dots = this.createRandomDots({width: 600, height: 550}, this.numberOfDots);
+    // this.renderGraph();
   }
 
+  ngOnInit() {
+    this.showSpinner = true;
+    this.http.get('/assets/data/connections.json')
+    .subscribe({
+      next: (resp: any) => {
+        this.connectionsParams = resp;
+        this.dots = resp.dots;
+        this.vertices = resp.vertices;
+        this.verticesPathStr = '';
+        Object.values(this.vertices).forEach((vertice: {dot: any, dStr: string}, i)=>{
+          this.verticesPathStr += vertice.dStr;
+        });
+        console.log(resp, '....');
+      },
+      error: error => {
+        console.log(error);
+      }
+    })
+  }
   renderGraph() {      
       this.showSpinner = true;
       this.dots = this.createRandomDots({width: 600, height: 550}, this.numberOfDots);
@@ -28,8 +52,13 @@ export class ConnectDotsComponent {
             nNearestNeighbors: this.nNearestNeighbors,
             colors: this.colors
           }
-      this.vertices =  this.getVertices(params).vertices;
+      const vertices =  this.getVertices(params).vertices;
+      this.verticesPathStr = '';
+      Object.values(vertices).forEach((vertice: {dot: any, dStr: string}, i)=>{
+        this.verticesPathStr += vertice.dStr;
+      });
       console.log('this.vertices:\t', this.vertices);
+
     }
 
   createRandomDots(area, nDots) {
@@ -44,7 +73,7 @@ export class ConnectDotsComponent {
 
   findNeighboors(dot, dots) {
     const mappedDots = dots.map(d => {
-      var dist = Math.sqrt(Math.pow((d.x - dot.x), 2) + Math.pow((d.y - dot.y), 2));
+      const dist = Math.sqrt(Math.pow((d.x - dot.x), 2) + Math.pow((d.y - dot.y), 2));
       return {id: d.id, x: d.x, y: d.y, distance: dist};
     })
     const neighboors = mappedDots.sort((a,b)=>{
@@ -93,10 +122,27 @@ export class ConnectDotsComponent {
                 if(!vertices[v]) {
                   let dStr = '';
                   dStr += 'M' + dot.x + ',' + dot.y;
-                  dStr += ' L' + neighboor.x + ',' + neighboor.y;
-                  vertices[v] = {dot, neighboor, dStr, 
-                                 color: colors[i%(colors.length-1)]
-                                };
+                  dStr += ' L' + neighboor.x + ',' + neighboor.y + ' ';
+                  let weight = Math.sqrt(Math.pow((neighboor.x - dot.x), 2) + Math.pow((neighboor.y - dot.y), 2));
+                  const vertice = {
+                    id: v, weight,
+                    dot, neighboor, dStr, 
+                    color: colors[i%(colors.length-1)]
+                    };
+
+                    dot.vertices = dot.vertices || [];
+                    const j = dot.vertices.indexOf(v);
+                    if(!(j > -1)) {
+                      dot.vertices.push(v);
+                    }
+
+                    neighboor.vertices = neighboor.vertices || [];
+                    const k = neighboor.vertices.indexOf(v);
+                    if(!(k > -1)) {
+                      neighboor.vertices.push(v);
+                    }
+                    
+                  vertices[v] = vertice
                 }
               });
             });
@@ -111,8 +157,8 @@ export class ConnectDotsComponent {
             const v = [dot.id,neighboor.id].sort().join('-');
             if(!vertices[v]) {
               let dStr = '';
-              dStr += 'M' + dot.x + ',' + dot.y;
-              dStr += ' L' + neighboor.x + ',' + neighboor.y;
+              dStr += ' M' + dot.x + ',' + dot.y;
+              dStr += ' L' + neighboor.x + ',' + neighboor.y + ' ';
               vertices[v] = {dot, neighboor, dStr, 
                              color: colors[i%(colors.length-1)]
                             };
@@ -121,8 +167,29 @@ export class ConnectDotsComponent {
         });
         console.timeEnd('NoStrategy');
     } // end else
-
-    // console.log('Areas: ', areas);
     return {type: 'getVertices', vertices, dots};
   }
+
+saveTextAsFile(textToWrite, fileNameToSaveAs){
+    	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'}); 
+    	var downloadLink = document.createElement("a");
+    	downloadLink.download = fileNameToSaveAs;
+    	downloadLink.innerHTML = "Download File";
+    	if (window.webkitURL != null){
+    		// Chrome allows the link to be clicked
+    		// without actually adding it to the DOM.
+    		downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    	}
+      else{
+    		// Firefox requires the link to be added to the DOM
+    		// before it can be clicked.
+    		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+    		downloadLink.onclick = () => { document.removeChild(downloadLink)};
+    		downloadLink.style.display = "none";
+    		document.body.appendChild(downloadLink);
+    	}
+    
+    	downloadLink.click();
+    }
+    
 }

@@ -10,22 +10,41 @@
             mat-button
             >
             <mat-icon>scatter_plot</mat-icon> Build connections
-          </button>
+          </button>          
     <label>Number of dots: <input size="2" [(ngModel)]="numberOfDots"></label>
     <label> Connect to <input size="1" [(ngModel)]="nNearestNeighbors"> neighbors</label>
 					
   </div>
+  <div>
+    <button
+            (click)="renderGraph()"
+            color="primary"
+            class="mat-elevation-z0 print-button"
+            aria-label="Print"
+            mat-button
+            >
+            <mat-icon>scatter_plot</mat-icon> Build connections
+          </button>
+  </div>
 
 <div >
-  <svg style="border: dashed 2px; display:block; width:600px; height:550px" id="svg-canvas">
+  <svg style="border: dashed 2px; display:block;" id="svg-canvas" [attr.viewBox]="'0 0 ' + canvasArea.width + ' ' + canvasArea.height + ''">
+    
+    <path [attr.d]="verticesPathStr" stroke-width="1" stroke="cyan" ></path>
     <g *ngIf="dots.length">
       <circle *ngFor="let circle of dots"
         [attr.cx]="circle.x"
         [attr.cy]="circle.y"
+        [attr.title]="circle.y"
         r="3"
-        fill="blue">
+        [attr.fill]="circle.fill || 'blue'">
+        <title>{{circle.id}}</title>
       </circle>
     </g>
-      <path *ngFor="let connection of vertices  | keyvalue" [attr.d]="connection.value['dStr']" [attr.stroke]="connection.value['color']" stroke-width="1" fill="none"/>
+    
+    <path [attr.d]="foundPathStr" stroke-width="1" stroke="violet" ></path>
+    
+      <!-- <path *ngFor="let connection of vertices  | keyvalue" [attr.d]="connection.value['dStr']" [attr.stroke]="connection.value['color']" stroke-width="1" fill="none"/> -->
   </svg>
 <div>
+  <textarea [(ngModel)]="foundPathStr"></textarea>
