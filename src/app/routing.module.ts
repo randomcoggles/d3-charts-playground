@@ -48,6 +48,11 @@ const routes: Routes = [
     path: 'under-construction',
     component: UnderConstructionComponent
   },
+  {
+    path: 'advanced-typescript',
+    loadChildren: 
+    () => import('./advanced-typescript/advanced-typescript.module').then(m => m.AdvancedTypescriptModule)
+  },
   
   // {
   //   path: 'form-design',
