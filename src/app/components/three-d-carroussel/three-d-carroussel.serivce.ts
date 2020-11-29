@@ -10,6 +10,5 @@ export class ThreeDCarrousselService {
 
   getCarrousselCards(): Observable<Array<CarrousselCard>> {
     return this.http.get<Array<CarrousselCard>>('assets/data/mock-carroussel-cards.json');
-
   }  
 }
