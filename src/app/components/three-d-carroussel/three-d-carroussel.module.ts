@@ -10,7 +10,7 @@ import { ThreeDCarrousselService } from "./three-d-carroussel.serivce";
   imports: [CommonModule, MaterialComponentsModule],
   declarations: [ThreeDCarrousselComponent, CarrousselControllerComponent],
   exports: [ThreeDCarrousselComponent],
-  providers: [, ThreeDCarrousselManager]
+  providers: [ThreeDCarrousselService, ThreeDCarrousselManager]
 })
 export class ThreeDCarrousselModule {}
 
