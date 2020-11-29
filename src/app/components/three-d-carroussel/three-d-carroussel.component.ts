@@ -75,5 +75,8 @@ export class ThreeDCarrousselComponent
   get cperspectiveOrigin() {
     return this.perspectiveOriginDefault ? this.perspectiveOrigin : 123;
   }
-  ngOnDestroy() {}
+
+  ngOnDestroy() {
+    this.tcManager.saveDefaults();
+  }
 }
