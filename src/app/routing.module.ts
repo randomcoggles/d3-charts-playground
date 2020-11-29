@@ -52,7 +52,7 @@ const routes: Routes = [
     path: 'advanced-typescript',
     loadChildren: 
     () => import('./advanced-typescript/advanced-typescript.module').then(m => m.AdvancedTypescriptModule)
-  },
+  }
   
   // {
   //   path: 'form-design',

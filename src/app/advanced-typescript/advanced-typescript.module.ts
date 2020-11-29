@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: AdvancedTypescriptComponent
+  },
+  {
+    path: 'advanced-ui',
+    component: AdvancedTypescriptComponent
   }
 ]
 

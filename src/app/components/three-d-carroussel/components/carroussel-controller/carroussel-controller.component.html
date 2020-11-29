@@ -2,7 +2,8 @@
 	<!-- <h5>Controller panel {{tcManager.depth }}</h5> -->
 	
 	<div class="perspective-area" 
-    #perspectiveArea 
+    #perspectiveArea
+    (mousedown)="positionPointer($event)"
     (mousemove)="perspectiveAreaMousemove($event)"
 		(wheel)="perspectiveAreaMouseWheel($event)">
 		<span>
