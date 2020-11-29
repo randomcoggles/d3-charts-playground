@@ -12,6 +12,7 @@ import {
 import { ThreeDCarrousselManager } from "./three-d-carroussel.manager";
 
 
+
 @Component({
   selector: "app-simple-three-d-carroussel",
   styleUrls: ["./three-d-carroussel.component.scss"],
@@ -77,6 +78,7 @@ export class ThreeDCarrousselComponent
   }
 
   ngOnDestroy() {
+    console.log('Saving da bagaça!');
     this.tcManager.saveDefaults();
   }
 }
