@@ -1,5 +1,5 @@
 import { Component, Input, ViewChild, ElementRef, AfterViewInit } from "@angular/core";
-import { ThreeDCarrousselManager } from "../../three-d-carroussel.service";
+import { ThreeDCarrousselManager } from "../../three-d-carroussel.manager";
 
 @Component({
   selector: 'app-carroussel-ccontroller',

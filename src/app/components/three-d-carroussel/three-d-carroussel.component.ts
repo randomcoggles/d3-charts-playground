@@ -9,7 +9,7 @@ import {
   OnInit,
   OnDestroy
 } from "@angular/core";
-import { ThreeDCarrousselManager } from "./three-d-carroussel.service";
+import { ThreeDCarrousselManager } from "./three-d-carroussel.manager";
 
 
 @Component({
