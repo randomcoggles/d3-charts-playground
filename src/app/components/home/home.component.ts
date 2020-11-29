@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  carrousselData = [
+  carrousselData = 
+  [
 	{
 		title: 'Bubble chart',
 		icon: 'bubble_chart',
