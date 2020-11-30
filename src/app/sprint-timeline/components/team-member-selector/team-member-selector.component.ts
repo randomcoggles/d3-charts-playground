@@ -59,7 +59,7 @@ export class TeamMemberSelectorComponent implements OnInit {
 
   getTeamMembers() {
     this.submitMessages = { waiting: "Getting team members..." };
-    this.http.get(this.teamMembersUrl).subscribe({
+    this.http.get(this.teamMembersUrl, {headers: {'cacheable': 'true'}}).subscribe({
       next: (teamMembers: TeamMember[]) => {
         this.teamMembers = teamMembers;
         this.submitMessages = {};

@@ -9,7 +9,8 @@ import {
   OnInit,
   OnDestroy
 } from "@angular/core";
-import { ThreeDCarrousselManager } from "./three-d-carroussel.service";
+import { ThreeDCarrousselManager } from "./three-d-carroussel.manager";
+
 
 
 @Component({
@@ -75,5 +76,9 @@ export class ThreeDCarrousselComponent
   get cperspectiveOrigin() {
     return this.perspectiveOriginDefault ? this.perspectiveOrigin : 123;
   }
-  ngOnDestroy() {}
+
+  ngOnDestroy() {
+    console.log('Saving da bagaça!');
+    this.tcManager.saveDefaults();
+  }
 }

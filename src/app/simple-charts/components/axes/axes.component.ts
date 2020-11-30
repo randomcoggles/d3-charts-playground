@@ -49,7 +49,7 @@ export class SimpleAxesComponent implements AfterViewInit {
     return [0, 0, this.canvaWidth, this.canvaHeight].join(" ");
   }
   ngAfterViewInit() {
-    this.http.get("./assets/bubble-data01.json").subscribe(
+    this.http.get("./assets/bubble-data01.json", {headers: {'cacheable': 'true'}}).subscribe(
       response => {
         this.data = response as any[];
       },

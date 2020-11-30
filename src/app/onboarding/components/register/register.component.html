@@ -1,0 +1,48 @@
+<h3>Register</h3>
+<form [formGroup]="form">
+	<p class="flex-row">
+		<mat-form-field class="flex">
+			<input matInput  placeholder="Name" autofocus pattern="[a-zA-Z\d]{3,}"
+      (keypress)="preventSpecialChars($event)"
+      autocomplete="off" formControlName="name" required minlength="3" maxlength="65">
+      <!-- <div>
+        {{f.name.errors | json}}
+      </div> -->
+      <mat-hint align="start" *ngIf="f.name.dirty && f.name.errors">
+          <div *ngIf="!!f.name.errors.pattern" class="error-msg">Please provide a valid name</div>
+          <div *ngIf="!!f.name.errors.required" class="error-msg">Name is required</div>
+      </mat-hint>
+  </mat-form-field>
+			<mat-form-field class="flex">
+				<input matInput  placeholder="Family name" autofocus autocomplete="off" formControlName="surname" required minlength="3" maxlength="65">
+  </mat-form-field>
+	</p>
+  <p class="flex-row">
+    <mat-form-field class="flex">
+      <input type="" matInput placeholder="Company" formControlName="company" maxlength="65">
+    </mat-form-field>
+  </p>
+  <p class="flex-row">
+    <mat-form-field class="flex">
+      <input type="" matInput placeholder="Country" formControlName="country">
+    </mat-form-field>
+  </p>
+  <p class="flex-row">
+    <mat-form-field class="flex">
+      <input type="" matInput placeholder="Email" formControlName="email" maxlength="65">
+    </mat-form-field>
+  </p>
+  <p class="flex-row">
+    <mat-form-field  class="flex">
+      <input type="date" matInput placeholder="Birthday" formControlName="birthday" maxlength="65" max="2002-01-01">
+      <mat-hint align="start" *ngIf="f.birthday?.dirty && f.birthday?.errors">
+            <div *ngIf="!!f.birthday?.errors.minlength" class="error-msg">At least 3 characters</div>
+            <div *ngIf="!!f.birthday?.errors.required" class="error-msg">Title is required</div>
+            <div *ngIf="!!f.birthday?.errors.minDate" class="error-msg">You have to be at least 18.</div>
+        </mat-hint>
+    </mat-form-field>
+    <mat-form-field class="flex"> 
+      <input type="" matInput placeholder="Cell phone" formControlName="cellphone" maxlength="65">
+    </mat-form-field>
+  </p>
+</form>

@@ -1,0 +1,16 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  > .flex {
+    flex:1;
+  }
+  > mat-form-field + mat-form-field{
+    margin-left: 8px;
+  }
+}
+.w-100 {
+  width: 100%;
+}
+.error-msg {
+  color: red;
+}
