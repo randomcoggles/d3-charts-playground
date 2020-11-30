@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
     this.threeCarroussellService.getCarrousselCards()
     .subscribe({
       next: (cards: Array<CarrousselCard> ) => {
+        console.log('There is your cards: ', cards);
         debugger;
         this.carrousselData = cards;
       }

@@ -9,6 +9,7 @@ export class ThreeDCarrousselService {
   constructor(private http: HttpClient) { }
 
   getCarrousselCards(): Observable<Array<CarrousselCard>> {
-    return this.http.get<Array<CarrousselCard>>('assets/data/mock-carroussel-cards.json');
+    return this.http.get<Array<CarrousselCard>>('/assets/data/mock-carroussel-cards.json');
+    
   }  
 }
