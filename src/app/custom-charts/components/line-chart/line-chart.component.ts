@@ -3,7 +3,7 @@ import {
   Input,
   ViewChild,
   ElementRef,
-  AfterViewInit
+  AfterViewInit,
 } from "@angular/core";
 import { select } from "d3-selection";
 import { scaleLinear, scalePoint } from "d3-scale";
@@ -13,7 +13,7 @@ import { axisBottom, axisLeft } from "d3";
 @Component({
   selector: "app-line-chart",
   templateUrl: "./line-chart.component.html",
-  styleUrls: ["./line-chart.component.scss"]
+  styleUrls: ["./line-chart.component.scss"],
 })
 export class LineChartComponent implements AfterViewInit {
   @ViewChild("svgWrap") svgWrap: ElementRef;
@@ -26,11 +26,11 @@ export class LineChartComponent implements AfterViewInit {
   data: any[];
 
   seasons = [
-    {season: 'summer', color: 'yellow'},
-    {season: 'autumn', color: 'lightcoral'},
-    {season: 'winter', color: 'silver'},
-    {season: 'spring', color: '#6ff743'}
-    ]
+    { season: "summer", color: "yellow" },
+    { season: "autumn", color: "lightcoral" },
+    { season: "winter", color: "silver" },
+    { season: "spring", color: "#6ff743" },
+  ];
 
   constructor() {
     // ======= create random data =======
@@ -39,7 +39,7 @@ export class LineChartComponent implements AfterViewInit {
   }
 
   generateData() {
-    const getSeason = monthNumber => {
+    const getSeason = (monthNumber) => {
       return monthNumber === 11 || monthNumber <= 1
         ? "winter"
         : monthNumber <= 4
@@ -63,12 +63,11 @@ export class LineChartComponent implements AfterViewInit {
       return {
         date: dateStr,
         value: Math.floor(Math.random() * 1000),
-        season: getSeason(monthNumber)
+        season: getSeason(monthNumber),
       };
     });
-    
-    this.update();
 
+    this.update();
   }
 
   getViewBox() {
@@ -83,10 +82,10 @@ export class LineChartComponent implements AfterViewInit {
   update() {
     // ========== CANVAS ==========
     let svg = select(this.svgWrap.nativeElement);
-    svg.select('.innert-chart').remove();
+    svg.select(".innert-chart").remove();
     svg = select(this.svgWrap.nativeElement)
       .append("g")
-      .attr('class', 'innert-chart')
+      .attr("class", "innert-chart")
       .attr(
         "transform",
         `translate(${this.padding.left}, ${this.padding.top})`
@@ -99,12 +98,10 @@ export class LineChartComponent implements AfterViewInit {
 
     // ========== CREATE SCALES ==========
     const xScale = scalePoint()
-      .domain(this.data.map(d => d.date).reverse())
+      .domain(this.data.map((d) => d.date).reverse())
       .range([0, innerWidth]);
 
-    const yScale = scaleLinear()
-      .domain([0, 1000])
-      .range([innerHeight, 0]);
+    const yScale = scaleLinear().domain([0, 1000]).range([innerHeight, 0]);
 
     // ========== ADD SCALES TO CANVAS ==========
 
@@ -117,41 +114,36 @@ export class LineChartComponent implements AfterViewInit {
       .selectAll("text")
       .attr("transform", "rotate(-35) translate(-10, 10)");
     // Vertical scale
-    svg
-      .append("g")
-      .attr("class", "y-axis")
-      .call(axisLeft(yScale));
+    svg.append("g").attr("class", "y-axis").call(axisLeft(yScale));
 
     // ========== ADD FOUR SEASONS ==========
 
     const seasonData = JSON.parse(JSON.stringify(this.data));
-    seasonData.shift();    
+    seasonData.shift();
 
     let incrementer = 0;
-    const bandWidth = (xScale.range()[1] / xScale.domain().length);
+    const bandWidth = xScale.range()[1] / xScale.domain().length;
     const bars = svg
       .append("g")
-      .attr("class", 'seasons')
+      .attr("class", "seasons")
       .selectAll("rect")
       .data(seasonData)
       .enter()
       .append("rect")
-      .attr("class", d => d.season)
-      .attr("x", d => xScale(d.date))
-      .attr("y", d => 0)
-      .attr("width", d => bandWidth)
-      .attr("height", d => innerHeight)
+      .attr("class", (d: any) => d.season)
+      .attr("x", (d: any) => xScale(d.date))
+      .attr("y", (d) => 0)
+      .attr("width", (d) => bandWidth)
+      .attr("height", (d) => innerHeight)
       .attr("fill", "steelblue")
       .attr("opacity", ".3")
       .append("svg:title")
-      .text(d => d.season);
+      .text((d: any) => d.season);
 
     // add the X gridlines
     const gridY = svg.append("g").attr("class", "grid");
     gridY.call(
-      axisLeft(yScale)
-        .tickSize(-innerWidth)
-        .tickFormat("") // To take at this. See what it means
+      axisLeft(yScale).tickSize(-innerWidth).tickFormat(null) // To take at this. See what it means
     );
     gridY
       .selectAll("line")
@@ -163,9 +155,7 @@ export class LineChartComponent implements AfterViewInit {
       .attr("class", "grid")
       .attr("transform", "translate(0," + innerHeight + ")");
     gridX.call(
-      axisBottom(xScale)
-        .tickSize(-innerHeight)
-        .tickFormat("") // To take at this. See what it means
+      axisBottom(xScale).tickSize(-innerHeight).tickFormat(null) // To take at this. See what it means
     );
     gridX
       .selectAll("line")
@@ -183,8 +173,8 @@ export class LineChartComponent implements AfterViewInit {
       .attr(
         "d",
         line()
-          .x(d => xScale(d.date))
-          .y(d => yScale(d.value))
+          .x((d: any) => xScale(d.date))
+          .y((d: any) => yScale(d.value))
       );
 
     // ========== ADD DOTS TO LINES ==========
@@ -194,7 +184,7 @@ export class LineChartComponent implements AfterViewInit {
       .attr("class", "line-dots")
       .selectAll(".bubble");
 
-    const smileys = val => {
+    const smileys = (val) => {
       return val < 250
         ? "sad"
         : val < 500
@@ -211,25 +201,25 @@ export class LineChartComponent implements AfterViewInit {
 
     g.append("use")
       .attr("class", "sad")
-      .attr("href", d => {
+      .attr("href", (d) => {
         const smiley = "#smiley-" + smileys(d.value);
         console.log("smiley:\t", smiley);
         return smiley;
       })
-      .attr("x", d => xScale(d.date) - 20)
-      .attr("y", d => yScale(d.value) - 20)
+      .attr("x", (d) => xScale(d.date) - 20)
+      .attr("y", (d) => yScale(d.value) - 20)
       .attr("item-index", (d, i) => i)
       // .style('transform', 'scale(.5)') // Can't scale
-      .on("mouseenter", function(d) {
+      .on("mouseenter", function (d) {
         const el = select(this);
         el.classed("dot-hover", true);
       })
-      .on("mouseout", function(d) {
+      .on("mouseout", function (d) {
         const el = select(this);
         el.classed("dot-hover", false);
       });
     const t = svg.selectAll(".line-dot");
-    t.each(function(item) {
+    t.each(function (item) {
       console.log(item);
       select(this).append("g");
       // .attr("cx", d => xScale(d.date))
