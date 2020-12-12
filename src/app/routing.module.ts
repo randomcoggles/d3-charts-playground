@@ -52,6 +52,11 @@ const routes: Routes = [
     path: 'advanced-typescript',
     loadChildren: 
     () => import('./advanced-typescript/advanced-typescript.module').then(m => m.AdvancedTypescriptModule)
+  },
+  {
+    path: 'rxjs-use-cases',
+    loadChildren: 
+    () => import('./rxjs-use-cases/rxjs-use-cases.module').then(m => m.RxjsUseCasesModule)
   }
   
   // {
