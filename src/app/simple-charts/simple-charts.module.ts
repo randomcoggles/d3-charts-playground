@@ -11,6 +11,7 @@ import { SimpleLineChart } from './components/line-chart/line-chart.component';
 import { BarchartComponent } from './components/bar-chart/bar-chart.component';
 import { BasicChartModule } from '../shared/basic-chart/basic-chart.module';
 import { TimelineComponent } from './components/timeline/timeline.component';
+import { SimpleNetworkComponent } from './components/simple-network/simple-network.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { TimelineComponent } from './components/timeline/timeline.component';
     BubbleChartComponent,
     SimpleLineChart,
     BarchartComponent,
-    TimelineComponent
+    TimelineComponent,
+    SimpleNetworkComponent
     ]
 })
 export class SimpleChartsModule { }
